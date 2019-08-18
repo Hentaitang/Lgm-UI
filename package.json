@@ -1,0 +1,23 @@
+{
+  "name": "lgmui",
+  "version": "1.0.0",
+  "description": "vue ui 框架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hentaitang/Lgm-UI.git"
+  },
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "Hentaitang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Hentaitang/Lgm-UI/issues"
+  },
+  "homepage": "https://github.com/Hentaitang/Lgm-UI#readme"
+}
