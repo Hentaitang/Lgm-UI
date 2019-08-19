@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <title>老干妈</title>
   <style>
-    *{
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    :root{
+    :root {
       --button-height: 32px;
       --font-size: 14px;
       --button-bg: white;
@@ -21,18 +21,23 @@
       --border-color-hover: #666;
     }
 
-    #app{
+    #app {
       margin: 20px;
     }
-    body{
+
+    body {
       font-size: var(--font-size);
     }
   </style>
 </head>
 <body>
 <div id="app">
-  <lgm-button></lgm-button>
+  <lgm-button icon="i-setting" icon-position="right">设置</lgm-button>
+  <lgm-button>按钮</lgm-button>
+  <lgm-button icon="i-setting" icon-position="left">按钮</lgm-button>
+  <lgm-icon icon="i-user"></lgm-icon>
 </div>
 <script src="./src/app.js"></script>
+<script src="//at.alicdn.com/t/font_951791_1yrzpz7dybq.js"></script>
 </body>
 </html>
