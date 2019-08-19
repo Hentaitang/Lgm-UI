@@ -1,5 +1,5 @@
 <template>
-  <svg class="lgm-icon" >
+  <svg class="lgm-icon" :class="{loadingIcon: icon === 'i-loading'}">
     <use :xlink:href=`#${icon}`></use>
   </svg>
 </template>
@@ -9,9 +9,16 @@
     props: ['icon']
   }
 </script>
-<style scoped>
+<style lang="scss" scoped>
+  @keyframes loading {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+  }
   .lgm-icon {
     width: 1em;
     height: 1em;
+    &.loadingIcon{
+      animation: loading 2s infinite linear;
+    }
   }
 </style>

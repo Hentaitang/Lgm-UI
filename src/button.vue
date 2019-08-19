@@ -1,6 +1,7 @@
 <template>
-  <button class="lgm-button" :class=`icon-${iconPosition}`>
-    <lgm-icon v-if="icon" :icon="icon" class="icon"></lgm-icon>
+  <button class="lgm-button" :class=`icon-${iconPosition}` @click="$emit('click')">
+    <lgm-icon icon="i-loading" class="icon" v-if="loading"></lgm-icon>
+    <lgm-icon v-if="icon && !loading" :icon="icon" class="icon"></lgm-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -11,6 +12,10 @@
     name: 'lgm-button',
     props: {
       icon: {},
+      loading: {
+        type: Boolean,
+        default: false
+      },
       iconPosition: {
         type: String,
         default: 'left',
