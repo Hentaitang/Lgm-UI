@@ -8,8 +8,9 @@
     name: 'lgm-button-group',
     mounted(){
       for(let node of this.$el.children){
-        if(node.tagName !== 'BUTTON'){
-          throw Error(`lgm-button-group 的子元素应该全是 lgm-button，不能包含${node.tagName.toLowerCase()}`)
+        const name = node.tagName.toLowerCase();
+        if(name !== 'button'){
+          throw Error(`lgm-button-group 的子元素应该全是 lgm-button，不能包含${name}`)
         }
       }
     }

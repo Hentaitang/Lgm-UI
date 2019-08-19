@@ -26,3 +26,69 @@ new Vue({
     }
   }
 });
+
+import chai from 'chai'
+const expect = chai.expect;
+// 单元测试
+{
+  let Constructor = Vue.extend(Button);
+  let vm = new Constructor({
+    propsData: {
+      icon: 'i-setting'
+    }
+  });
+  vm.$mount();
+  let useElement = vm.$el.querySelector('use');
+  let href = useElement.getAttribute('xlink:href');
+  expect(href).to.be.eq('#i-setting');
+  vm.$el.remove();
+  vm.$destroy()
+}
+{
+  let constructor = Vue.extend(Button);
+  let vm = new constructor({
+    propsData: {
+      icon: 'i-setting',
+      loading: true
+    }
+  });
+  vm.$mount();
+  let useElement = vm.$el.querySelector('use');
+  let href  = useElement.getAttribute('xlink:href');
+  expect(href).to.be.eq('#i-loading');
+  vm.$el.remove();
+  vm.$destroy()
+}
+{
+  const div = document.createElement('div');
+  document.body.appendChild(div);
+  let constructor = Vue.extend(Button);
+  let vm = new constructor({
+    propsData: {
+      icon: 'i-setting'
+    }
+  });
+  vm.$mount(div);
+  let svg = vm.$el.querySelector('svg');
+  let {order} = window.getComputedStyle(svg);
+  expect(order).to.be.eq('0');
+  vm.$el.remove();
+  vm.$destroy()
+}
+{
+  const div = document.createElement('div');
+  document.body.appendChild(div);
+  let constructor = Vue.extend(Button);
+  let vm = new constructor({
+    propsData: {
+      icon: 'i-setting',
+      iconPosition: 'right'
+    }
+  });
+  vm.$mount(div);
+  let svg = vm.$el.querySelector('svg');
+  let {order} = window.getComputedStyle(svg);
+  expect(order).to.be.eq('1');
+  vm.$el.remove();
+  vm.$destroy()
+}
