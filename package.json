@@ -39,6 +39,7 @@
     "mocha": "^6.2.0",
     "parcel-bundler": "^1.12.3",
     "sass": "^1.22.10",
+    "sinon": "^7.4.1",
     "vue-template-compiler": "^2.6.10"
   }
 }

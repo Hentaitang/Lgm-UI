@@ -8,8 +8,12 @@
   </button>
 </template>
 <script>
+  import Icon from './icon'
   export default {
     name: 'lgm-button',
+    components: {
+      'lgm-icon': Icon
+    },
     props: {
       icon: {},
       loading: {
