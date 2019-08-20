@@ -1,8 +1,8 @@
 {
-  "name": "lgmui",
-  "version": "1.0.0",
-  "description": "vue ui 框架",
-  "main": "index.js",
+  "name": "lgm-ui",
+  "version": "0.0.4",
+  "description": "vue ui 工具",
+  "main": "dist/index.js",
   "scripts": {
     "dev-test": "parcel watch test/* --no-cache & karma start",
     "test": "parcel build test/* --no-cache --no-minify && karma start --single-run"
