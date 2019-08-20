@@ -50,7 +50,7 @@ describe('Button', () => {
     vm.$el.remove();
     vm.$destroy()
   });
-  it('设置position可以改变order', ()=>{
+  it('设置position可以改变order', () => {
     const div = document.createElement('div');
     document.body.appendChild(div);
     const Constructor = Vue.extend(Button);
@@ -64,6 +64,18 @@ describe('Button', () => {
     const {order} = window.getComputedStyle(svg);
     expect(order).to.be.eq('1');
     vm.$el.remove();
+    vm.$destroy()
+  });
+  it('点击button触发click事件', () => {
+    const Constructor = Vue.extend(Button);
+    const vm = new Constructor({
+      propsData: {
+        icon: 'i-setting'
+      }
+    }).$mount();
+    const callback = sinon.fake();
+    vm.$on('click', callback);
+    vm.$el.click();
     vm.$destroy()
   })
 });
