@@ -8,6 +8,12 @@ const components = [
   ButtonGroup
 ];
 
+components.forEach(component=>{
+  component.install = function (Vue) {
+    Vue.component(component.name, component)
+  }
+});
+
 const install = function(Vue){
   components.forEach(component => {
     Vue.component(component.name, component)
