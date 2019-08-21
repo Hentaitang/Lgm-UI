@@ -23,6 +23,9 @@ new Vue({
     },
     changeLoading3(){
       this.loading3 = !this.loading3;
+    },
+    ddd(){
+      console.log(1)
     }
   }
 });

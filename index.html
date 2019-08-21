@@ -34,18 +34,20 @@
 <div id="app">
   <lgm-button icon="i-setting" icon-position="right" :loading="loading1" @click="changeLoading1">设置</lgm-button>
   <lgm-button :loading="loading2" @click="changeLoading2">按钮</lgm-button>
-  <lgm-button icon="i-setting" icon-position="left" :loading="loading3" @click="changeLoading3">按钮</lgm-button>
-  <lgm-button>默认按钮</lgm-button>
-  <lgm-button type="primary">主要按钮</lgm-button>
-  <lgm-button type="success">成功按钮</lgm-button>
-  <lgm-button type="info">信息按钮</lgm-button>
-  <lgm-button type="warning">警告按钮</lgm-button>
-  <lgm-button type="danger">危险按钮</lgm-button>
+  <lgm-button icon="i-setting" icon-position="left" :loading="loading3" @click="changeLoading3" disabled>按钮</lgm-button>
+  <lgm-button disabled>默认按钮</lgm-button>
+  <lgm-button type="primary" round>主要按钮</lgm-button>
+  <lgm-button type="success" icon="i-setting" disabled>成功按钮</lgm-button>
+  <lgm-button type="info" disabled>信息按钮</lgm-button>
+  <lgm-button type="warning" disabled>警告按钮</lgm-button>
+  <lgm-button type="danger" disabled @click="ddd" round>危险按钮</lgm-button>
+  <lgm-button icon="i-setting" type="primary" circle></lgm-button>
   <lgm-icon icon="i-user"></lgm-icon>
   <lgm-icon icon="i-loading"></lgm-icon>
   <lgm-button-group>
-    <lgm-button icon="i-left">上一页</lgm-button>
-    <lgm-button icon="i-right" icon-position="right">下一页</lgm-button>
+    <lgm-button type="primary" icon="i-left">上一页</lgm-button>
+    <lgm-button type="primary">更多</lgm-button>
+    <lgm-button type="primary" icon="i-right" icon-position="right">下一页</lgm-button>
   </lgm-button-group>
 </div>
 <script src="./src/app.js"></script>
