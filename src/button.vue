@@ -2,9 +2,9 @@
   <button class="lgm-button" :class="{
     [`icon-${iconPosition}`]: true,
     [`lgm-button-${type}`]: type,
-    'circle': circle,
+    'circle': circle && !$slots.default,
     'round': round,
-    'iconOnly': !$slots.default
+    'iconOnly': icon && !$slots.default
     }" :disabled="disabled" @click="$emit('click')">
     <lgm-icon icon="i-loading" class="icon" v-if="loading"></lgm-icon>
     <lgm-icon v-if="icon && !loading" :icon="icon" class="icon"></lgm-icon>
