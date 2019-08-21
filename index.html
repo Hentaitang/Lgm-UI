@@ -10,47 +10,48 @@
       box-sizing: border-box;
     }
 
-    :root {
-      --button-height: 32px;
-      --font-size: 14px;
-      --button-bg: white;
-      --button-active-bg: #eee;
-      --border-radius: 4px;
-      --color: #333;
-      --border-color: #999;
-      --border-color-hover: #666;
-    }
-
     #app {
       margin: 20px;
     }
-
-    body {
-      font-size: var(--font-size);
+    .box{
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
 <div id="app">
-  <lgm-button icon="i-setting" icon-position="right" :loading="loading1" @click="changeLoading1">设置</lgm-button>
-  <lgm-button :loading="loading2" @click="changeLoading2">按钮</lgm-button>
-  <lgm-button icon="i-setting" icon-position="left" :loading="loading3" @click="changeLoading3" disabled>按钮</lgm-button>
-  <lgm-button disabled>默认按钮</lgm-button>
-  <lgm-button type="primary" circle>主要按钮</lgm-button>
-  <lgm-button type="success" icon="i-setting" disabled>成功按钮</lgm-button>
-  <lgm-button type="info" disabled>信息按钮</lgm-button>
-  <lgm-button type="warning" disabled>警告按钮</lgm-button>
-  <lgm-button type="danger" disabled @click="ddd" round>危险按钮</lgm-button>
-  <lgm-button icon="i-setting" type="primary" circle></lgm-button>
-  <lgm-icon icon="i-user"></lgm-icon>
-  <lgm-icon icon="i-loading"></lgm-icon>
-  <lgm-button-group>
-    <lgm-button type="primary" icon="i-left">上一页</lgm-button>
-    <lgm-button type="primary">更多</lgm-button>
-    <lgm-button type="primary" icon="i-right" icon-position="right">下一页</lgm-button>
-  </lgm-button-group>
+  <div class="box">
+    <lgm-input placeholder="123" disabled></lgm-input>
+    <input type="text" disabled>
+  </div>
+  <div class="box">
+    <lgm-input></lgm-input>
+    <lgm-button icon="i-setting" icon-position="right" :loading="loading1" @click="changeLoading1">设置</lgm-button>
+    <lgm-button :loading="loading2" @click="changeLoading2">按钮</lgm-button>
+    <lgm-button icon="i-setting" icon-position="left" :loading="loading3" @click="changeLoading3" disabled>按钮
+    </lgm-button>
+  </div>
+  <div class="box">
+    <lgm-button disabled>默认按钮</lgm-button>
+    <lgm-button type="primary" round>主要按钮</lgm-button>
+    <lgm-button type="success" icon="i-setting" disabled>成功按钮</lgm-button>
+    <lgm-button type="info" disabled>信息按钮</lgm-button>
+    <lgm-button type="warning" disabled>警告按钮</lgm-button>
+    <lgm-button type="danger" disabled @click="ddd" round>危险按钮</lgm-button>
+    <lgm-button icon="i-setting" type="primary" circle></lgm-button>
+  </div>
+  <div class="box">
+    <lgm-icon icon="i-user"></lgm-icon>
+    <lgm-icon icon="i-loading"></lgm-icon>
+  </div>
+  <div class="box">
+    <lgm-button-group>
+      <lgm-button type="primary" icon="i-left">上一页</lgm-button>
+      <lgm-button type="primary">更多</lgm-button>
+      <lgm-button type="primary" icon="i-right" icon-position="right">下一页</lgm-button>
+    </lgm-button-group>
+  </div>
 </div>
 <script src="./src/app.js"></script>
-<script src="//at.alicdn.com/t/font_951791_t9qehupurl.js"></script>
 </body>
 </html>
