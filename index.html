@@ -21,9 +21,10 @@
 <body>
 <div id="app">
   <div class="box">
-    <lgm-input placeholder="123" value="xxxxxxxxx"></lgm-input>
+    <lgm-input placeholder="123" value="xxxxxxxxx" @change="change" @blur="blur" @focus="focus"></lgm-input>
     <lgm-input placeholder="请输入内容" v-model="str" clearable></lgm-input>
     {{str}}
+    <lgm-input type="textarea" placeholder="请输入内容" v-model="str"></lgm-input>
   </div>
   <div class="box">
     <lgm-button icon="i-setting" icon-position="right" :loading="loading1" @click="changeLoading1">设置</lgm-button>

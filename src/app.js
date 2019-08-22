@@ -15,7 +15,7 @@ new Vue({
     loading1: false,
     loading2: false,
     loading3: false,
-    str: ''
+    str: 'sssssssss'
   },
   methods:{
     changeLoading1(){
@@ -31,7 +31,13 @@ new Vue({
       console.log(1)
     },
     change(v){
-      // console.log(v)
+      console.log(v)
+    },
+    focus(v){
+      console.log(v)
+    },
+    blur(v){
+      console.log(v)
     }
   }
 });
