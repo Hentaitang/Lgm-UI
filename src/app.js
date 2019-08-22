@@ -14,7 +14,8 @@ new Vue({
   data: {
     loading1: false,
     loading2: false,
-    loading3: false
+    loading3: false,
+    str: ''
   },
   methods:{
     changeLoading1(){
@@ -28,6 +29,9 @@ new Vue({
     },
     ddd(){
       console.log(1)
+    },
+    change(v){
+      // console.log(v)
     }
   }
 });
