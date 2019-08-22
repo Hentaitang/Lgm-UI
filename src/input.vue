@@ -27,6 +27,7 @@
               cols="30"
               :rows="rows"
               :value="value"
+              @change="$emit('change', $event.target.value)"
               @input="$emit('input', $event.target.value)"
               @focus="$emit('focus', $event)"
               @blur="$emit('blur', $event)"

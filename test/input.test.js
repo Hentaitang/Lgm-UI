@@ -13,7 +13,7 @@ describe('Input', () => {
   describe('props', () => {
     const Constructor = Vue.extend(Input);
     let vm;
-    afterEach(()=>{
+    afterEach(() => {
       vm.$destroy()
     });
     it('接收type', () => {
@@ -145,12 +145,73 @@ describe('Input', () => {
       expect(rows).to.be.eq('4')
     })
   });
-  // describe('event', () => {
-  //   const Constructor = Vue.extend(Input);
-  //   let vm;
-  //   afterEach(()=>{
-  //     vm.$destroy()
-  //   });
-  //   // it('')
-  // })
+  describe('event', () => {
+    const Constructor = Vue.extend(Input);
+    let vm;
+    afterEach(() => {
+      vm.$destroy()
+    });
+    it('input 支持 change/input 事件', () => {
+      ['change', 'input'].forEach(eventName => {
+        vm = new Constructor({}).$mount();
+        const callback = sinon.fake();
+        vm.$on(eventName, callback);
+        // 触发input的change/input事件
+        let event = new Event(eventName);
+        Object.defineProperty(event, 'target', {
+          value: {value: '123'},
+          enumerable: true
+        });
+        const inputElement = vm.$el.querySelector('input');
+        inputElement.dispatchEvent(event);
+        expect(callback).to.have.been.calledWith('123')
+      })
+    });
+    it('input 支持 focus/blur 事件', () => {
+      ['focus', 'blur'].forEach(eventName => {
+        vm = new Constructor({}).$mount();
+        const callback = sinon.fake();
+        vm.$on(eventName, callback);
+        let event = new Event(eventName);
+        const inputElement = vm.$el.querySelector('input');
+        inputElement.dispatchEvent(event);
+        expect(callback).to.have.been.calledWith(event)
+      })
+    });
+    it('textarea 支持 change/input 事件', () => {
+      ['change', 'input'].forEach(eventName => {
+        vm = new Constructor({
+          propsData: {
+            type: 'textarea'
+          }
+        }).$mount();
+        const callback = sinon.fake();
+        vm.$on(eventName, callback);
+        const event = new Event(eventName);
+        Object.defineProperty(event, 'target', {
+          value: {value: 'qqq'},
+          enumerable: true,
+          configurable: true
+        });
+        const textarea = vm.$el.querySelector('textarea');
+        textarea.dispatchEvent(event);
+        expect(callback).to.have.been.calledWith('qqq')
+      })
+    });
+    it('textarea 支持 focus/blur 事件', () => {
+      ['focus', 'blur'].forEach(eventName => {
+        vm = new Constructor({
+          propsData: {
+            type: 'textarea'
+          }
+        }).$mount();
+        const callback = sinon.fake();
+        vm.$on(eventName, callback);
+        let event = new Event(eventName);
+        const inputElement = vm.$el.querySelector('textarea');
+        inputElement.dispatchEvent(event);
+        expect(callback).to.have.been.calledWith(event)
+      })
+    })
+  })
 });

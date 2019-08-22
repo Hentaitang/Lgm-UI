@@ -1,11 +1,13 @@
 import Button from './src/button'
 import Icon from './src/icon'
 import ButtonGroup from './src/button-group'
+import Input from './src/input'
 
 const components = [
   Button,
   Icon,
-  ButtonGroup
+  ButtonGroup,
+  Input
 ];
 
 components.forEach(component=>{
@@ -20,4 +22,4 @@ const install = function(Vue){
   })
 };
 
-export default {Button, Icon, ButtonGroup, install}
+export default {Button, Icon, ButtonGroup, Input, install}

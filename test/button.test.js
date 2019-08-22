@@ -111,6 +111,7 @@ describe('Button', () => {
       const callback = sinon.fake();
       vm.$on('click', callback);
       vm.$el.click();
+      expect(callback).to.been.called;
       vm.$destroy()
     })
   })
