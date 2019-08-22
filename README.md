@@ -26,11 +26,11 @@
 待发布
 ## 安装
 ```$xslt
-    $ yarn add lgm-ui
-    
-    // or
-    
-    $ npm install lgm-ui --save
+$ yarn add lgm-ui
+
+// or
+
+$ npm install lgm-ui --save
 ```
 ## 引入项目
 在main.js文件下添加如下配置:
