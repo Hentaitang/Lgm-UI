@@ -47,6 +47,7 @@
 <style lang="scss" scoped>
   .lgm-row {
     display: flex;
+    flex-wrap: wrap;
     &.row-flex-start{
       justify-content: flex-start;
     };
