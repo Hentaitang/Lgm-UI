@@ -1,8 +1,8 @@
 # LGM-UI 
 
 [![Build Status](https://travis-ci.org/Hentaitang/Lgm-UI.svg?branch=master)](https://travis-ci.org/Hentaitang/Lgm-UI)
-![npm](https://img.shields.io/npm/v/lgm-ui)
-![GitHub](https://img.shields.io/github/license/Hentaitang/Lgm-UI)
+[![npm](https://img.shields.io/npm/v/lgm-ui)](https://www.npmjs.com/package/lgm-ui)
+[![GitHub](https://img.shields.io/github/license/Hentaitang/Lgm-UI)](https://github.com/Hentaitang/Lgm-UI/blob/master/LICENSE)
 
 基于vue 2.x 开发的的UI组件库
 ## 介绍
