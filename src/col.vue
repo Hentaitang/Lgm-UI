@@ -60,7 +60,7 @@
           ...createClasses({span, offset}, ''),
           ...createClasses(phone, 'phone-'),
           ...createClasses(miniPad, 'miniPad-'),
-          ...createClasses(pad, 'miniPad-'),
+          ...createClasses(pad, 'pad-'),
           ...createClasses(narrowPc, 'narrowPc-'),
           ...createClasses(pc, 'pc-'),
           ...createClasses(widePc, 'widePc-')

@@ -12,7 +12,7 @@ describe('Row', () => {
     expect(Row).to.be.exist
   });
   describe('props', () => {
-    const rowConstructor = Vue.extend(Row);
+    const RowConstructor = Vue.extend(Row);
     let vm;
     afterEach(() => {
       vm.$el.remove();
@@ -21,7 +21,7 @@ describe('Row', () => {
     it('接收justify属性', () => {
       const div = document.createElement('div');
       document.body.appendChild(div);
-      vm = new rowConstructor({
+      vm = new RowConstructor({
         propsData: {
           justify: 'start'
         }
@@ -34,7 +34,7 @@ describe('Row', () => {
     it('接收align属性', () => {
       const div = document.createElement('div');
       document.body.appendChild(div);
-      vm = new rowConstructor({
+      vm = new RowConstructor({
         propsData: {
           align: 'top'
         }
@@ -58,7 +58,7 @@ describe('Row', () => {
       vm = new Vue({
         el: div
       });
-      setTimeout(()=>{
+      setTimeout(() => {
         const row = vm.$el.querySelector('.lgm-row');
         expect(getComputedStyle(row).marginLeft).to.eq('-10px');
         expect(getComputedStyle(row).marginRight).to.eq('-10px');
