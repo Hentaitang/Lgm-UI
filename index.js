@@ -9,6 +9,7 @@ import Header from './src/header';
 import Content from './src/content';
 import Footer from './src/footer';
 import Sider from './src/sider';
+import Toast from './src/toast';
 
 const components = [
   Button,
@@ -21,10 +22,12 @@ const components = [
   Header,
   Content,
   Footer,
-  Sider
+  Sider,
+  Toast
 ];
 
 components.forEach(component=>{
+  if(component.name === 'lgm-toast') return;
   component.install = function (Vue) {
     Vue.component(component.name, component)
   }
@@ -32,8 +35,9 @@ components.forEach(component=>{
 
 const install = function(Vue){
   components.forEach(component => {
+    if(component.name === 'lgm-toast') return Vue.use(component);
     Vue.component(component.name, component)
   })
 };
 
-export default {Button, Icon, ButtonGroup, Input, Row, Col,Layout, Header, Content, Footer, Sider, install}
+export default {Button, Icon, ButtonGroup, Input, Row, Col,Layout, Header, Content, Footer, Sider, Toast, install}

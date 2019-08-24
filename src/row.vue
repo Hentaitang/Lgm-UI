@@ -11,13 +11,13 @@
       justify: {
         type: String,
         validator: function (value) {
-          return ['start', 'center', 'end', 'space-between', 'space-around'].includes(value)
+          return ['start', 'center', 'end', 'space-between', 'space-around'].indexOf(value) >= 0
         }
       },
       align: {
         type: String,
         validator: function (value) {
-          return ['top', 'middle', 'bottom'].includes(value)
+          return ['top', 'middle', 'bottom'].indexOf(value) >=0
         }
       }
     },

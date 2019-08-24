@@ -10,6 +10,7 @@ import Header from './header';
 import Content from './content';
 import Footer from './footer';
 import Sider from './sider';
+import Toast from './toast';
 
 Vue.component(Button.name, Button);
 Vue.component(Icon.name, Icon);
@@ -22,6 +23,7 @@ Vue.component(Header.name, Header);
 Vue.component(Content.name, Content);
 Vue.component(Footer.name, Footer);
 Vue.component(Sider.name, Sider);
+Vue.use(Toast);
 
 
 new Vue({
@@ -53,6 +55,12 @@ new Vue({
     },
     blur(v){
       console.log(v)
+    },
+    showToast(){
+      this.$toast({message:'123', type: 'error', showClose: true})
+    },
+    showToast2(){
+      this.$toast({message:'321', type: 'error', showClose: true})
     }
   }
 });

@@ -7,7 +7,7 @@
   const validator = function (value) {
     let valid = true;
     Object.keys(value).forEach(key => {
-      ['span', 'offset'].includes(key) ? '' : (valid = false)
+      ['span', 'offset'].indexOf(key) >= 0 ? '' : (valid = false)
     });
     return valid
   };
