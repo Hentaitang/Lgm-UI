@@ -3,7 +3,12 @@ import Icon from './src/icon';
 import ButtonGroup from './src/button-group';
 import Input from './src/input';
 import Row from './src/row';
-import Col from './src/col'
+import Col from './src/col';
+import Layout from './src/layout';
+import Header from './src/header';
+import Content from './src/content';
+import Footer from './src/footer';
+import Sider from './src/sider';
 
 const components = [
   Button,
@@ -11,7 +16,12 @@ const components = [
   ButtonGroup,
   Input,
   Row,
-  Col
+  Col,
+  Layout,
+  Header,
+  Content,
+  Footer,
+  Sider
 ];
 
 components.forEach(component=>{
@@ -26,4 +36,4 @@ const install = function(Vue){
   })
 };
 
-export default {Button, Icon, ButtonGroup, Input, Row, Col, install}
+export default {Button, Icon, ButtonGroup, Input, Row, Col,Layout, Header, Content, Footer, Sider, install}

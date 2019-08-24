@@ -44,7 +44,8 @@ describe('Col', ()=>{
         }
       }).$mount(div);
       const colStyle = getComputedStyle(vm.$el).order;
-      expect(colStyle).to.be.eq('2')
+      expect(colStyle).to.be.eq('2');
+      vm.$el.remove()
     });
     it('接收phone属性', ()=>{
       vm = new Constructor({

@@ -4,7 +4,12 @@ import Icon from './icon';
 import GroupButton from './button-group';
 import Input from './input';
 import Row from './row';
-import Col from './col'
+import Col from './col';
+import Layout from './layout';
+import Header from './header';
+import Content from './content';
+import Footer from './footer';
+import Sider from './sider';
 
 Vue.component(Button.name, Button);
 Vue.component(Icon.name, Icon);
@@ -12,6 +17,12 @@ Vue.component(GroupButton.name, GroupButton);
 Vue.component(Input.name, Input);
 Vue.component(Row.name, Row);
 Vue.component(Col.name, Col);
+Vue.component(Layout.name, Layout);
+Vue.component(Header.name, Header);
+Vue.component(Content.name, Content);
+Vue.component(Footer.name, Footer);
+Vue.component(Sider.name, Sider);
+
 
 new Vue({
   el: '#app',
