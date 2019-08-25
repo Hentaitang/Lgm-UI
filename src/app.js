@@ -25,6 +25,7 @@ Vue.component(Footer.name, Footer);
 Vue.component(Sider.name, Sider);
 Vue.use(Toast);
 
+// console.log(Toast);
 
 new Vue({
   el: '#app',
@@ -57,10 +58,16 @@ new Vue({
       console.log(v)
     },
     showToast(){
-      this.$toast({message:'123', type: 'error', showClose: true})
+      // this.$toast({message:' 这是一个不会自动关闭的消息',
+      //   type: 'info', showClose: true, duration: 0})
+      Toast.use({message:' <strong>这是一个不会自动关闭的消息</strong>',
+         showClose: true, duration: 0, type: 'error', dangerouslyUseHTMLString: true,onClose: function (vm) {
+          console.log(vm);
+          console.log(111)
+        }})
     },
     showToast2(){
-      this.$toast({message:'321', type: 'error', showClose: true})
+      this.$toast({message:'321', type: 'warning', showClose: true})
     }
   }
 });
