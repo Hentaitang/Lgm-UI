@@ -60,14 +60,18 @@ new Vue({
     showToast(){
       // this.$toast({message:' 这是一个不会自动关闭的消息',
       //   type: 'info', showClose: true, duration: 0})
-      Toast.use({message:' <strong>这是一个不会自动关闭的消息</strong>',
-         showClose: true, duration: 0, type: 'error', dangerouslyUseHTMLString: true,onClose: function (vm) {
+      Toast.use({message:' 这是一个不会自动关闭的消息这是一个不会自动关闭的消息这是一个不会自动关闭的消息这是一个不会自动关闭的消息这是一个不会自动关闭的消息这是一个不会自动关闭的消息这是一个不会自动关闭的消息这是一个不会自动关闭的消息',
+         showClose: true,
+        duration: 0,
+        type: 'error',
+        position: 'right',
+        onClose: function (vm) {
           console.log(vm);
           console.log(111)
         }})
     },
     showToast2(){
-      this.$toast({message:'321', type: 'warning', showClose: true})
+      this.$toast({message:'321', type: 'warning', showClose: true, position: 'right',})
     }
   }
 });

@@ -83,6 +83,13 @@
       dangerouslyUseHTMLString: {
         type: Boolean,
         default: false
+      },
+      position: {
+        type: String,
+        default: 'middle',
+        validator: function(value){
+          return ['left', 'middle', 'right'].indexOf(value) >= 0
+        }
       }
     },
     computed: {
@@ -94,7 +101,8 @@
       },
       toastClass() {
         return {
-          'showClose': this.showClose
+          'showClose': this.showClose,
+          [this.position]: this.position
         }
       },
       showIcon() {
@@ -180,7 +188,7 @@
   }
 </script>
 <style lang="scss" scoped>
-  @keyframes fade-in {
+  @keyframes middle-fade-in {
     0% {
       opacity: 0;
       transform: translate(-50%, -75%);
@@ -191,7 +199,7 @@
     }
   }
 
-  @keyframes fade-out {
+  @keyframes middle-fade-out {
     0% {
       opacity: 1;
       transform: translate(-50%, 0%);
@@ -199,6 +207,28 @@
     100% {
       opacity: 0;
       transform: translate(-50%, -75%);
+    }
+  }
+
+  @keyframes side-fade-in {
+    0% {
+      opacity: 0;
+      transform: translate(0%, -75%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0%, 0%);
+    }
+  }
+
+  @keyframes side-fade-out {
+    0% {
+      opacity: 1;
+      transform: translate(0%, 0%);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(0%, -75%);
     }
   }
 
@@ -206,10 +236,7 @@
     font-size: 14px;
     position: fixed;
     z-index: 1010;
-    left: 50%;
-    transform: translateX(-50%);
     transition: all .4s;
-    animation: fade-in .3s;
     background-color: #fff;
 
     .lgm-toast-content {
@@ -223,6 +250,7 @@
 
       .message {
         flex: 1;
+        max-width: 500px;
       }
 
       .prefix-icon {
@@ -259,7 +287,6 @@
           cursor: pointer;
           fill: #999;
           font-size: 16px;
-
           &:hover {
             fill: #666
           }
@@ -267,8 +294,29 @@
       }
     }
 
-    &.close {
-      animation: fade-out .2s;
+    &.left {
+      left: 30px;
+      animation: side-fade-in .3s;
+      &.close {
+        animation: side-fade-out .2s;
+      }
+    }
+
+    &.middle{
+      left: 50%;
+      transform: translateX(-50%);
+      animation: middle-fade-in .3s;
+      &.close {
+        animation: middle-fade-out .2s;
+      }
+    }
+
+    &.right{
+      right: 30px;
+      animation: side-fade-in .3s;
+      &.close {
+        animation: side-fade-out .2s;
+      }
     }
   }
 </style>
