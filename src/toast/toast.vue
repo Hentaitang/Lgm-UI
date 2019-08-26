@@ -17,7 +17,7 @@
 </template>
 <script>
   import Vue from 'vue';
-  import Icon from './icon';
+  import Icon from '../icon/icon';
 
   function createToast(vue, toast, options){
     const {message, type, showClose, duration, position, offset, noPrefix, icon, onClose, dangerouslyUseHTMLString} = options;

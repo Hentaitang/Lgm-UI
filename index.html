@@ -43,9 +43,28 @@
 </head>
 <body>
 <div id="app">
-  <lgm-button type="primary" @click="showToast" loading>按钮</lgm-button>
-  <lgm-button type="primary" @click="showToast2">321</lgm-button>
-  <!--  <lgm-layout>-->
+  <lgm-tabs :selected.sync="select" :position="position">
+    <lgm-tabs-head>
+      <lgm-tabs-item label="small" icon="i-setting">小学</lgm-tabs-item>
+      <lgm-tabs-item label="middle" icon="i-close" disabled>初中</lgm-tabs-item>
+      <lgm-tabs-item label="high" icon="i-loading">高中</lgm-tabs-item>
+    </lgm-tabs-head>
+    <lgm-tabs-body>
+      <lgm-tabs-pane name="small">小学生</lgm-tabs-pane>
+      <lgm-tabs-pane name="middle">初中生</lgm-tabs-pane>
+      <lgm-tabs-pane name="high">高中生</lgm-tabs-pane>
+    </lgm-tabs-body>
+  </lgm-tabs>
+  <div class="box">
+    <lgm-button @click="position='top'">上</lgm-button>
+    <lgm-button @click="position='left'">左</lgm-button>
+    <lgm-button @click="position='bottom'">下</lgm-button>
+    <lgm-button @click="position='right'">右</lgm-button>
+  </div>
+
+<!--  <lgm-button type="primary" @click="showToast" loading>按钮</lgm-button>-->
+<!--  <lgm-button type="primary" @click="showToast2">321</lgm-button>-->
+<!--    <lgm-layout>-->
 <!--    <lgm-header>Header</lgm-header>-->
 <!--    <lgm-layout>-->
 
@@ -55,22 +74,22 @@
 <!--    <lgm-footer>Footer</lgm-footer>-->
 <!--  </lgm-layout>-->
 <!--  <lgm-row>-->
-<!--    <lgm-col :phone="{'span': 24}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
+<!--    <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
 <!--      <div class="colbox">col-4 order2</div>-->
 <!--    </lgm-col>-->
-<!--    <lgm-col :phone="{'span': 24}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
+<!--    <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
 <!--      <div class="colbox">col-4 order4</div>-->
 <!--    </lgm-col>-->
-<!--    <lgm-col :phone="{'span': 24}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
+<!--    <lgm-col :phone="{'span': 24}"  :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
 <!--      <div class="colbox">col-4 order1</div>-->
 <!--    </lgm-col>-->
-<!--    <lgm-col :phone="{'span': 24}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
+<!--    <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
 <!--      <div class="colbox">col-4 order3</div>-->
 <!--    </lgm-col>-->
-<!--    <lgm-col :phone="{'span': 24}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
+<!--    <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
 <!--      <div class="colbox">col-4 order3</div>-->
 <!--    </lgm-col>-->
-<!--    <lgm-col :phone="{'span': 24}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
+<!--    <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
 <!--      <div class="colbox">col-4 order3</div>-->
 <!--    </lgm-col>-->
 <!--  </lgm-row>-->

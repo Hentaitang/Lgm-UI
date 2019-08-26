@@ -116,7 +116,7 @@
       }
     }
 
-    @media (max-width: 575px){
+    @media (min-width: 0px){
       $class: col-phone-;
       @for $n from 1 through 24 {
         &.#{$class}#{$n} {

@@ -1,16 +1,21 @@
 import Vue from 'vue';
-import Button from './button';
-import Icon from './icon';
-import GroupButton from './button-group';
-import Input from './input';
-import Row from './row';
-import Col from './col';
-import Layout from './layout';
-import Header from './header';
-import Content from './content';
-import Footer from './footer';
-import Sider from './sider';
-import Toast from './toast';
+import Button from './button/button';
+import Icon from './icon/icon';
+import GroupButton from './button/button-group';
+import Input from './input/input';
+import Row from './grid/row';
+import Col from './grid/col';
+import Layout from './layout/layout';
+import Header from './layout/header';
+import Content from './layout/content';
+import Footer from './layout/footer';
+import Sider from './layout/sider';
+import Toast from './toast/toast';
+import Tabs from './tabs/tabs';
+import TabsHead from './tabs/tabsHead';
+import TabsItem from './tabs/tabsItem';
+import TabsBody from './tabs/tabsBody';
+import TabsPane from './tabs/tabsPane';
 
 Vue.component(Button.name, Button);
 Vue.component(Icon.name, Icon);
@@ -23,9 +28,12 @@ Vue.component(Header.name, Header);
 Vue.component(Content.name, Content);
 Vue.component(Footer.name, Footer);
 Vue.component(Sider.name, Sider);
+Vue.component(Tabs.name, Tabs);
+Vue.component(TabsHead.name, TabsHead);
+Vue.component(TabsItem.name, TabsItem);
+Vue.component(TabsBody.name, TabsBody);
+Vue.component(TabsPane.name, TabsPane);
 Vue.use(Toast);
-
-// console.log(Toast);
 
 new Vue({
   el: '#app',
@@ -33,9 +41,19 @@ new Vue({
     loading1: false,
     loading2: false,
     loading3: false,
-    str: 'sssssssss'
+    str: 'left',
+    select: 'middle',
+    position: 'left'
+  },
+  watch: {
+    select(n){
+      console.log(n)
+    }
   },
   methods:{
+    changePosition(){
+      this.position = this.str
+    },
     changeLoading1(){
       this.loading1 = !this.loading1;
     },

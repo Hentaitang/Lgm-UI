@@ -1,15 +1,15 @@
-import Button from './src/button';
-import Icon from './src/icon';
-import ButtonGroup from './src/button-group';
-import Input from './src/input';
-import Row from './src/row';
-import Col from './src/col';
-import Layout from './src/layout';
-import Header from './src/header';
-import Content from './src/content';
-import Footer from './src/footer';
-import Sider from './src/sider';
-import Toast from './src/toast';
+import Button from './src/button/button';
+import Icon from './src/icon/icon';
+import ButtonGroup from './src/button/button-group';
+import Input from './src/input/input';
+import Row from './src/grid/row';
+import Col from './src/grid/col';
+import Layout from './src/layout/layout';
+import Header from './src/layout/header';
+import Content from './src/layout/content';
+import Footer from './src/layout/footer';
+import Sider from './src/layout/sider';
+import Toast from './src/toast/toast';
 
 const components = [
   Button,
