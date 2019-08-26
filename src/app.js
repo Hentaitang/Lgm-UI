@@ -58,8 +58,6 @@ new Vue({
       console.log(v)
     },
     showToast(){
-      // this.$toast({message:' 这是一个不会自动关闭的消息',
-      //   type: 'info', showClose: true, duration: 0})
       Toast.use({message:' 这是一个不会自动关闭的消息这是一个不会自动关闭的消息这是一个不会自动关闭的消息这是一个不会自动关闭的消息这是一个不会自动关闭的消息这是一个不会自动关闭的消息这是一个不会自动关闭的消息这是一个不会自动关闭的消息',
          showClose: true,
         duration: 0,
@@ -71,7 +69,7 @@ new Vue({
         }})
     },
     showToast2(){
-      this.$toast({message:'321', type: 'warning', showClose: true, position: 'right',})
+      this.$toast({ type: 'warning', showClose: true, message: 'xxx', position: 'left',})
     }
   }
 });

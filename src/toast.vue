@@ -28,6 +28,7 @@
         showClose,
         duration,
         position,
+        message,
         offset,
         noPrefix,
         icon,
@@ -128,7 +129,7 @@
     },
     methods: {
       resetTop(type) {
-        const toasts = document.querySelectorAll('.lgm-toast');
+        const toasts = document.querySelectorAll(`.lgm-toast.${this.position}`);
         let result;
         if (toasts.length) {
           const {height} = toasts[toasts.length - 1].getBoundingClientRect();
@@ -153,7 +154,7 @@
         clearTimeout(this.timer)
       },
       beforeClose() {
-        const toasts = document.querySelectorAll('.lgm-toast');
+        const toasts = document.querySelectorAll(`.lgm-toast.${this.position}`);
         const top = this.$el.style.top;
         let toastIndex;
         const toastHeight = this.$el.getBoundingClientRect().height;
