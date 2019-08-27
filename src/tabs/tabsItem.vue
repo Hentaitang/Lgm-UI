@@ -1,5 +1,5 @@
 <template>
-  <div class="lgm-tabs-item" :class="classes" @click="clickItem">
+  <div class="lgm-tabs-item" :class="classes" @click="clickItem" :data-label="label">
     <lgm-icon :icon="icon" class="icon" v-if="icon"></lgm-icon>
     <slot></slot>
   </div>

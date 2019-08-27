@@ -1,5 +1,5 @@
 <template>
-  <div class="lgm-tabs-pane" v-if="active">
+  <div class="lgm-tabs-pane" v-if="active" :data-name="name">
     <slot></slot>
   </div>
 </template>
