@@ -45,7 +45,8 @@ new Vue({
     loading3: false,
     str: 'left',
     select: 'middle',
-    position: 'left'
+    position: 'left',
+    show: true
   },
   watch: {
     select(n){
@@ -77,6 +78,9 @@ new Vue({
     },
     blur(v){
       console.log(v)
+    },
+    changeShow(){
+      this.show = !this.show
     },
     showToast(){
       Toast.use({message:' 这是一个不会自动关闭的消息这是一个不会自动关闭的消息这是一个不会自动关闭的消息这是一个不会自动关闭的消息这是一个不会自动关闭的消息这是一个不会自动关闭的消息这是一个不会自动关闭的消息这是一个不会自动关闭的消息',

@@ -48,7 +48,8 @@
 </head>
 <body>
 <div id="app">
-  <div style="overflow: hidden; border: 1px solid red; padding: 20px;">
+  <lgm-button @click="changeShow">关闭</lgm-button>
+  <div style="overflow: hidden; border: 1px solid red; padding: 20px;" v-if="show">
     <lgm-popover>
       <template v-slot:content="{close}">
         <h4>这是标题</h4>
@@ -79,7 +80,7 @@
       <lgm-button>点我</lgm-button>
     </lgm-popover>
   </div>
-  <div style="overflow: hidden; border: 1px solid red; padding: 20px;" @click="ddd">
+  <div style="overflow: hidden; border: 1px solid red; padding: 20px;">
     <lgm-popover trigger="hover">
       <template slot="content">
         <h4>这是标题</h4>

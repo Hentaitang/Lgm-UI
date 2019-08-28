@@ -42,7 +42,7 @@
         button.addEventListener('mouseleave', this.mouseLeave)
       }
     },
-    destroyed(){
+    beforeDestroy(){
       const {button} = this.$refs;
       if (this.trigger === 'click') {
         button.removeEventListener('click', this.clickButton)

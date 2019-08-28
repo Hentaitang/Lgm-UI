@@ -15,6 +15,7 @@ import TabsHead from './src/tabs/tabsHead';
 import TabsItem from './src/tabs/tabsItem';
 import TabsBody from './src/tabs/tabsBody';
 import TabsPane from './src/tabs/tabsPane';
+import Popover from './src/popover/popover'
 
 const components = [
   Button,
@@ -33,7 +34,8 @@ const components = [
   TabsHead,
   TabsItem,
   TabsBody,
-  TabsPane
+  TabsPane,
+  Popover
 ];
 
 components.forEach(component=>{
@@ -68,5 +70,6 @@ export default {
   TabsItem,
   TabsBody,
   TabsPane,
+  Popover,
   install
 }
