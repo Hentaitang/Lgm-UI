@@ -48,18 +48,21 @@
 </head>
 <body>
 <div id="app">
-  <lgm-popover>
-    <template slot="content">
-      <div>popover 内容</div>
-    </template>
-    <button>点我</button>
-  </lgm-popover>
-  <lgm-popover>
-    <template slot="content">
-      <div>popover 内容</div>
-    </template>
-    <button>点我</button>
-  </lgm-popover>
+  <div style="overflow: hidden; border: 1px solid red; padding: 10px;" @click="ddd">
+    <lgm-popover>
+      <template slot="content">
+        <div>popover 内容</div>
+      </template>
+      <lgm-button>点我</lgm-button>
+    </lgm-popover>
+    <lgm-popover>
+      <template slot="content">
+        <div>popover 内容</div>
+      </template>
+      <lgm-button>点我</lgm-button>
+    </lgm-popover>
+  </div>
+
   <!--  <lgm-popover>-->
   <!--    <template slot="content">-->
   <!--      <h4>这是标题</h4>-->
