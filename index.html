@@ -11,7 +11,7 @@
     }
 
     #app {
-      margin: 20px;
+      padding: 200px;
     }
 
     .box {
@@ -24,107 +24,131 @@
       height: 100px;
       margin-bottom: 10px;
     }
-    .lgm-layout{
+
+    .lgm-layout {
       height: 500px;
     }
-    .lgm-header{
+
+    .lgm-header {
       border: 1px solid red;
     }
-    .lgm-sider{
+
+    .lgm-sider {
       border: 1px solid red;
     }
-    .lgm-content{
+
+    .lgm-content {
       border: 1px solid red;
     }
-    .lgm-footer{
+
+    .lgm-footer {
       border: 1px solid red;
     }
   </style>
 </head>
 <body>
 <div id="app">
-  <lgm-tabs :selected.sync="select" :position="position">
-    <lgm-tabs-head>
-      <lgm-tabs-item label="small" icon="i-setting">小学</lgm-tabs-item>
-      <lgm-tabs-item label="middle" icon="i-close" disabled>初中</lgm-tabs-item>
-      <lgm-tabs-item label="high" icon="i-loading">高中</lgm-tabs-item>
-    </lgm-tabs-head>
-    <lgm-tabs-body>
-      <lgm-tabs-pane name="small">小学生</lgm-tabs-pane>
-      <lgm-tabs-pane name="middle">初中生</lgm-tabs-pane>
-      <lgm-tabs-pane name="high">高中生</lgm-tabs-pane>
-    </lgm-tabs-body>
-  </lgm-tabs>
-  <div class="box">
-    <lgm-button @click="position='top'">上</lgm-button>
-    <lgm-button @click="position='left'">左</lgm-button>
-    <lgm-button @click="position='bottom'">下</lgm-button>
-    <lgm-button @click="position='right'">右</lgm-button>
-  </div>
+  <lgm-popover>
+    <template slot="content">
+      <div>popover 内容</div>
+    </template>
+    <button>点我</button>
+  </lgm-popover>
+  <lgm-popover>
+    <template slot="content">
+      <div>popover 内容</div>
+    </template>
+    <button>点我</button>
+  </lgm-popover>
+  <!--  <lgm-popover>-->
+  <!--    <template slot="content">-->
+  <!--      <h4>这是标题</h4>-->
+  <!--      <div>这是一段内容，这是一段内容，这是一段内容，这是一段内容。</div>-->
+  <!--    </template>-->
+  <!--    <lgm-button>click 弹出</lgm-button>-->
+  <!--  </lgm-popover>-->
+  <!--  <lgm-tabs :selected.sync="select" :position="position">-->
+  <!--    <lgm-tabs-head>-->
+  <!--      <lgm-tabs-item label="small" icon="i-setting">小学</lgm-tabs-item>-->
+  <!--      <lgm-tabs-item label="middle" icon="i-close" disabled>初中</lgm-tabs-item>-->
+  <!--      <lgm-tabs-item label="high" icon="i-loading">高中</lgm-tabs-item>-->
+  <!--    </lgm-tabs-head>-->
+  <!--    <lgm-tabs-body>-->
+  <!--      <lgm-tabs-pane name="small">小学生</lgm-tabs-pane>-->
+  <!--      <lgm-tabs-pane name="middle">初中生</lgm-tabs-pane>-->
+  <!--      <lgm-tabs-pane name="high">高中生</lgm-tabs-pane>-->
+  <!--    </lgm-tabs-body>-->
+  <!--  </lgm-tabs>-->
+  <!--  <div class="box">-->
+  <!--    <lgm-button @click="position='top'">上</lgm-button>-->
+  <!--    <lgm-button @click="position='left'">左</lgm-button>-->
+  <!--    <lgm-button @click="position='bottom'">下</lgm-button>-->
+  <!--    <lgm-button @click="position='right'">右</lgm-button>-->
+  <!--  </div>-->
 
-<!--  <lgm-button type="primary" @click="showToast" loading>按钮</lgm-button>-->
-<!--  <lgm-button type="primary" @click="showToast2">321</lgm-button>-->
-<!--    <lgm-layout>-->
-<!--    <lgm-header>Header</lgm-header>-->
-<!--    <lgm-layout>-->
+  <!--  <lgm-button type="primary" @click="showToast" loading>按钮</lgm-button>-->
+  <!--  <lgm-button type="primary" @click="showToast2">321</lgm-button>-->
+  <!--    <lgm-layout>-->
+  <!--    <lgm-header>Header</lgm-header>-->
+  <!--    <lgm-layout>-->
 
-<!--      <lgm-content>Content</lgm-content>-->
-<!--      <lgm-sider>Sider</lgm-sider>-->
-<!--    </lgm-layout>-->
-<!--    <lgm-footer>Footer</lgm-footer>-->
-<!--  </lgm-layout>-->
-<!--  <lgm-row>-->
-<!--    <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
-<!--      <div class="colbox">col-4 order2</div>-->
-<!--    </lgm-col>-->
-<!--    <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
-<!--      <div class="colbox">col-4 order4</div>-->
-<!--    </lgm-col>-->
-<!--    <lgm-col :phone="{'span': 24}"  :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
-<!--      <div class="colbox">col-4 order1</div>-->
-<!--    </lgm-col>-->
-<!--    <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
-<!--      <div class="colbox">col-4 order3</div>-->
-<!--    </lgm-col>-->
-<!--    <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
-<!--      <div class="colbox">col-4 order3</div>-->
-<!--    </lgm-col>-->
-<!--    <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
-<!--      <div class="colbox">col-4 order3</div>-->
-<!--    </lgm-col>-->
-<!--  </lgm-row>-->
-<!--    <div class="box">-->
-<!--      <lgm-input placeholder="123" value="xxxxxxxxx"></lgm-input>-->
-<!--      <lgm-input placeholder="请输入内容" v-model="str" clearable></lgm-input>-->
-<!--      {{str}}-->
-<!--      <lgm-input type="textarea" placeholder="请输入内容" v-model="str" @change="change" @blur="blur" @focus="focus"></lgm-input>-->
-<!--    </div>-->
-<!--    <div class="box">-->
-<!--      <lgm-button icon="i-setting" icon-position="right" :loading="loading1" @click="changeLoading1">设置</lgm-button>-->
-<!--      <lgm-button :loading="loading2" @click="changeLoading2">按钮</lgm-button>-->
-<!--      <lgm-button icon="i-setting" icon-position="left" :loading="loading3" @click="changeLoading3" disabled>按钮-->
-<!--      </lgm-button>-->
-<!--    </div>-->
-<!--    <div class="box">-->
-<!--      <lgm-button disabled>默认按钮</lgm-button>-->
-<!--      <lgm-button type="primary" round>主要按钮</lgm-button>-->
-<!--      <lgm-button type="success" icon="i-setting" disabled>成功按钮</lgm-button>-->
-<!--      <lgm-button type="info" disabled>信息按钮</lgm-button>-->
-<!--      <lgm-button type="warning" disabled>警告按钮</lgm-button>-->
-<!--      <lgm-button type="danger" disabled @click="ddd" round>危险按钮</lgm-button>-->
-<!--      <lgm-button icon="i-setting" type="primary" circle></lgm-button>-->
-<!--    </div>-->
-<!--    <div class="box">-->
-<!--      <lgm-icon icon="i-user"></lgm-icon>-->
-<!--      <lgm-icon icon="i-loading"></lgm-icon>-->
-<!--    </div>-->
-<!--    <div class="box">-->
-<!--      <lgm-button-group>-->
-<!--        <lgm-button type="primary" icon="i-left">上一页</lgm-button>-->
-<!--        <lgm-button type="primary">更多</lgm-button>-->
-<!--        <lgm-button type="primary" icon="i-right" icon-position="right">下一页</lgm-button>-->
-<!--      </lgm-button-group>-->
-<!--    </div>-->
+  <!--      <lgm-content>Content</lgm-content>-->
+  <!--      <lgm-sider>Sider</lgm-sider>-->
+  <!--    </lgm-layout>-->
+  <!--    <lgm-footer>Footer</lgm-footer>-->
+  <!--  </lgm-layout>-->
+  <!--  <lgm-row>-->
+  <!--    <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
+  <!--      <div class="colbox">col-4 order2</div>-->
+  <!--    </lgm-col>-->
+  <!--    <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
+  <!--      <div class="colbox">col-4 order4</div>-->
+  <!--    </lgm-col>-->
+  <!--    <lgm-col :phone="{'span': 24}"  :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
+  <!--      <div class="colbox">col-4 order1</div>-->
+  <!--    </lgm-col>-->
+  <!--    <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
+  <!--      <div class="colbox">col-4 order3</div>-->
+  <!--    </lgm-col>-->
+  <!--    <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
+  <!--      <div class="colbox">col-4 order3</div>-->
+  <!--    </lgm-col>-->
+  <!--    <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
+  <!--      <div class="colbox">col-4 order3</div>-->
+  <!--    </lgm-col>-->
+  <!--  </lgm-row>-->
+  <!--    <div class="box">-->
+  <!--      <lgm-input placeholder="123" value="xxxxxxxxx"></lgm-input>-->
+  <!--      <lgm-input placeholder="请输入内容" v-model="str" clearable></lgm-input>-->
+  <!--      {{str}}-->
+  <!--      <lgm-input type="textarea" placeholder="请输入内容" v-model="str" @change="change" @blur="blur" @focus="focus"></lgm-input>-->
+  <!--    </div>-->
+  <!--    <div class="box">-->
+  <!--      <lgm-button icon="i-setting" icon-position="right" :loading="loading1" @click="changeLoading1">设置</lgm-button>-->
+  <!--      <lgm-button :loading="loading2" @click="changeLoading2">按钮</lgm-button>-->
+  <!--      <lgm-button icon="i-setting" icon-position="left" :loading="loading3" @click="changeLoading3" disabled>按钮-->
+  <!--      </lgm-button>-->
+  <!--    </div>-->
+  <!--    <div class="box">-->
+  <!--      <lgm-button disabled>默认按钮</lgm-button>-->
+  <!--      <lgm-button type="primary" round>主要按钮</lgm-button>-->
+  <!--      <lgm-button type="success" icon="i-setting" disabled>成功按钮</lgm-button>-->
+  <!--      <lgm-button type="info" disabled>信息按钮</lgm-button>-->
+  <!--      <lgm-button type="warning" disabled>警告按钮</lgm-button>-->
+  <!--      <lgm-button type="danger" disabled @click="ddd" round>危险按钮</lgm-button>-->
+  <!--      <lgm-button icon="i-setting" type="primary" circle></lgm-button>-->
+  <!--    </div>-->
+  <!--    <div class="box">-->
+  <!--      <lgm-icon icon="i-user"></lgm-icon>-->
+  <!--      <lgm-icon icon="i-loading"></lgm-icon>-->
+  <!--    </div>-->
+  <!--    <div class="box">-->
+  <!--      <lgm-button-group>-->
+  <!--        <lgm-button type="primary" icon="i-left">上一页</lgm-button>-->
+  <!--        <lgm-button type="primary">更多</lgm-button>-->
+  <!--        <lgm-button type="primary" icon="i-right" icon-position="right">下一页</lgm-button>-->
+  <!--      </lgm-button-group>-->
+  <!--    </div>-->
 </div>
 <script src="./src/app.js"></script>
 </body>
