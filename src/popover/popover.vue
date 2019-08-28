@@ -32,15 +32,15 @@
       },
       popoverOpen(){
         this.visible = true;
-        setTimeout(() => {
+        this.$nextTick(() => {
           this.contentPosition();
           document.addEventListener('click', this.clickOutside)
         })
       },
       contentPosition(){
-        document.body.appendChild(this.$refs.content);
-        const {content, button} = this.$refs;
-        const {left, right, top, bottom} = this.$refs.button.getBoundingClientRect();
+        const {content} = this.$refs;
+        document.body.appendChild(content);
+        const {left, right, top, bottom, height} = this.$refs.button.getBoundingClientRect();
         switch(this.position){
           case 'top':
             content.style.left = left + window.scrollX + 'px';
@@ -48,15 +48,15 @@
             break;
           case 'left':
             content.style.left = left + window.scrollX + 'px';
-            content.style.top = top + window.scrollY +'px';
+            content.style.top = top + height / 2 + window.scrollY +'px';
             break;
           case 'right':
-            content.style.left = left + window.scrollX + 'px';
-            content.style.top = top + window.scrollY +'px';
+            content.style.left = right + window.scrollX + 'px';
+            content.style.top = top + height / 2  + window.scrollY +'px';
             break;
           case 'bottom':
             content.style.left = left + window.scrollX + 'px';
-            content.style.top = top + window.scrollY +'px';
+            content.style.top = bottom + window.scrollY +'px';
             break;
         }
       },
@@ -88,31 +88,84 @@
   .contentWrapper {
     border: 1px solid black;
     position: absolute;
-    transform: translateY(-100%);
     background-color: white;
-    margin-top: -10px;
     padding: .8em 1em;
     border-radius: 5px;
     word-break: break-all;
     max-width: 20em;
-    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .5));
-    &::before{
-      content: '';
-      display: block;
-      border: 10px solid transparent;
-      position: absolute;
-      top: 100%;
-      border-top-color: black;
-      border-bottom: none;
-    }
+    &::before,
     &::after{
       content: '';
       display: block;
       border: 10px solid transparent;
       position: absolute;
-      top: calc(100% - 1px);
-      border-top-color: white;
-      border-bottom: none;
+    }
+    &.top{
+      margin-top: -10px;
+      transform: translateY(-100%);
+      filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .5));
+      &::before{
+        top: 100%;
+        border-top-color: black;
+        border-bottom: none;
+      }
+      &::after{
+        top: calc(100% - 1px);
+        border-top-color: white;
+        border-bottom: none;
+      }
+    }
+    &.bottom{
+      margin-top: 10px;
+      filter: drop-shadow(0 -1px 1px rgba(0, 0, 0, .5));
+      &::before{
+        bottom: 100%;
+        border-bottom-color: black;
+        border-top: none;
+      }
+      &::after{
+        bottom: calc(100% - 1px);
+        border-bottom-color: white;
+        border-top: none;
+      }
+    }
+    &.left{
+      transform: translate(-100%, -50%);
+      margin-left: -10px;
+      filter: drop-shadow(1px 0px 1px rgba(0, 0, 0, .5));
+      &::before{
+        top: 50%;
+        left: 100%;
+        border-left-color: black;
+        border-right: none;
+        transform: translateY(-50%);
+      }
+      &::after{
+        top: 50%;
+        left: calc(100% - 1px);
+        border-left-color: white;
+        border-right: none;
+        transform: translateY(-50%);
+      }
+    }
+    &.right{
+      margin-left: 10px;
+      transform: translateY(-50%);
+      filter: drop-shadow(-1px 0px 1px rgba(0, 0, 0, .5));
+      &::before{
+        top: 50%;
+        right: 100%;
+        border-right-color: black;
+        border-left: none;
+        transform: translateY(-50%);
+      }
+      &::after{
+        top: 50%;
+        right: calc(100% - 1px);
+        border-right-color: white;
+        border-left: none;
+        transform: translateY(-50%);
+      }
     }
   }
 </style>
