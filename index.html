@@ -48,30 +48,31 @@
 </head>
 <body>
 <div id="app">
-  <div style="overflow: hidden; border: 1px solid red; padding: 20px;" @click="ddd">
+  <div style="overflow: hidden; border: 1px solid red; padding: 20px;">
     <lgm-popover>
-      <template slot="content">
+      <template v-slot:content="{close}">
         <h4>这是标题</h4>
         <div>这是一段内容，这是一段内容，这是一段内容，这是一段内容。</div>
+        <lgm-button @click="()=>ddd(close)">关闭</lgm-button>
       </template>
       <lgm-button>点我</lgm-button>
     </lgm-popover>
     <lgm-popover position="bottom">
-      <template slot="content">
+      <template v-slot:content>
         <h4>这是标题</h4>
         <div>这是一段内容，这是一段内容，这是一段内容，这是一段内容。</div>
       </template>
       <lgm-button>点我</lgm-button>
     </lgm-popover>
     <lgm-popover position="left">
-      <template slot="content">
+      <template v-slot:content>
         <h4>这是标题</h4>
         <div>这是一段内容，这是一段内容，这是一段内容，这是一段内容。</div>
       </template>
       <lgm-button>点我</lgm-button>
     </lgm-popover>
     <lgm-popover position="right">
-      <template slot="content">
+      <template v-slot:content>
         <h4>这是标题</h4>
         <div>这是一段内容，这是一段内容，这是一段内容，这是一段内容。</div>
       </template>
@@ -135,8 +136,8 @@
   <!--    <lgm-button @click="position='right'">右</lgm-button>-->
   <!--  </div>-->
 
-  <!--  <lgm-button type="primary" @click="showToast" loading>按钮</lgm-button>-->
-  <!--  <lgm-button type="primary" @click="showToast2">321</lgm-button>-->
+<!--    <lgm-button type="primary" @click="showToast" loading>按钮</lgm-button>-->
+<!--    <lgm-button type="primary" @click="showToast2">321</lgm-button>-->
   <!--    <lgm-layout>-->
   <!--    <lgm-header>Header</lgm-header>-->
   <!--    <lgm-layout>-->

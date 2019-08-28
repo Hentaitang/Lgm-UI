@@ -1,7 +1,7 @@
 <template>
   <div class="lgm-popover">
     <div class="contentWrapper" v-if="visible" ref="content" :class="{[position]: position}">
-      <slot name="content"></slot>
+      <slot name="content" :close="popoverClose"></slot>
     </div>
     <span ref="button" class="button">
       <slot></slot>
