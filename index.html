@@ -48,16 +48,18 @@
 </head>
 <body>
 <div id="app">
-  <div style="overflow: hidden; border: 1px solid red; padding: 10px;" @click="ddd">
-    <lgm-popover>
+  <div style="overflow: hidden; border: 1px solid red; padding: 20px;" @click="ddd">
+    <lgm-popover position="bottom">
       <template slot="content">
-        <div>popover 内容</div>
+        <h4>这是标题</h4>
+        <div>这是一段内容，这是一段内容，这是一段内容，这是一段内容。</div>
       </template>
       <lgm-button>点我</lgm-button>
     </lgm-popover>
-    <lgm-popover>
+    <lgm-popover position="left">
       <template slot="content">
-        <div>popover 内容</div>
+        <h4>这是标题</h4>
+        <div>这是一段内容，这是一段内容，这是一段内容，这是一段内容。</div>
       </template>
       <lgm-button>点我</lgm-button>
     </lgm-popover>
