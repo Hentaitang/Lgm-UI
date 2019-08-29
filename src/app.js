@@ -51,10 +51,13 @@ new Vue({
     select: 'middle',
     position: 'left',
     show: true,
-    selectItems: ['1', '2']
+    selectItems: ['3', '4']
   },
   watch: {
     select(n){
+      console.log(n)
+    },
+    selectItems(n){
       console.log(n)
     }
   },
