@@ -102,7 +102,7 @@ new Vue({
         }})
     },
     showToast2(){
-      this.$toast({ type: 'warning', showClose: true, message: 'xxx', position: 'left',})
+      this.$toast({ message: '123'})
     }
   }
 });
