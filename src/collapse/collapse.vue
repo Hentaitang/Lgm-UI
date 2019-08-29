@@ -32,29 +32,37 @@
       }
     },
     mounted() {
-      this.$children.forEach(vm => {
-        vm.single = this.single
-      });
-      if (this.single) {
-        this.selectItems = this.selected.slice(0, 1);
-      } else {
-        this.selectItems = JSON.parse(JSON.stringify(this.selected));
-      }
+      this.judgeSingle();
+      this.addSelected();
+      this.removeSelected();
       this.eventBus.$emit('update:selected', this.selectItems);
-      this.eventBus.$on('addSelected', (select) => {
+    },
+    methods: {
+      judgeSingle(){
         if (this.single) {
-          this.selectItems = [select];
+          this.selectItems = this.selected.slice(0, 1);
         } else {
-          this.selectItems.push(select);
+          this.selectItems = JSON.parse(JSON.stringify(this.selected));
         }
-        this.eventBus.$emit('update:selected', this.selectItems);
-        this.$emit('update:selected', this.selectItems);
-      });
-      this.eventBus.$on('removeSelected', (select) => {
-        this.selectItems.splice(this.selectItems.indexOf(select), 1);
-        this.eventBus.$emit('update:selected', this.selectItems);
-        this.$emit('update:selected', this.selectItems);
-      })
+      },
+      addSelected(){
+        this.eventBus.$on('addSelected', (select) => {
+          if (this.single) {
+            this.selectItems = [select];
+          } else {
+            this.selectItems.push(select);
+          }
+          this.eventBus.$emit('update:selected', this.selectItems);
+          this.$emit('update:selected', this.selectItems);
+        });
+      },
+      removeSelected(){
+        this.eventBus.$on('removeSelected', (select) => {
+          this.selectItems.splice(this.selectItems.indexOf(select), 1);
+          this.eventBus.$emit('update:selected', this.selectItems);
+          this.$emit('update:selected', this.selectItems);
+        })
+      }
     }
   }
 </script>

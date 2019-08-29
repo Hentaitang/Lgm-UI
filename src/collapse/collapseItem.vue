@@ -1,7 +1,8 @@
 <template>
   <div class="lgm-collpase-item">
-    <div class="title" @click="showContent">
-      {{title}}
+    <div class="titleWrapper" @click="showContent">
+      <div v-if="title" class="title">{{title}}</div>
+      <div v-else class="title"><slot name="title"></slot></div>
       <lgm-icon icon="i-right" class="icon" :class="{'active': active}"></lgm-icon>
     </div>
     <div class="content" v-if="active">
@@ -16,8 +17,7 @@
     name: 'lgm-collapse-item',
     props: {
       title: {
-        type: String,
-        required: true
+        type: String
       },
       name: {
         type: String,
@@ -54,12 +54,21 @@
     border-top: 1px solid #d9d9d9;
     border-bottom: 1px solid #d9d9d9;
     margin-top: -1px;
+    font-size: 13px;
 
-    .title {
+    .titleWrapper {
       padding: .8em;
-      color: rgba(0, 0, 0, .85);
       cursor: pointer;
       position: relative;
+      .title{
+        color: rgba(0, 0, 0, .85);
+        word-break: break-all;
+        padding-right: 2em;
+        .lgm-icon{
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
 
       .icon {
         position: absolute;
