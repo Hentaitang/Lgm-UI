@@ -1,6 +1,6 @@
 {
   "name": "lgm-ui",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "vue ui 工具",
   "main": "dist/index.js",
   "scripts": {
