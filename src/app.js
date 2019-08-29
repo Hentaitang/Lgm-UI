@@ -17,6 +17,8 @@ import TabsItem from './tabs/tabsItem';
 import TabsBody from './tabs/tabsBody';
 import TabsPane from './tabs/tabsPane';
 import Popover from './popover/popover';
+import Collapse from './collapse/collapse';
+import CollapseItem from './collapse/collapseItem';
 
 Vue.component(Button.name, Button);
 Vue.component(Icon.name, Icon);
@@ -35,6 +37,8 @@ Vue.component(TabsItem.name, TabsItem);
 Vue.component(TabsBody.name, TabsBody);
 Vue.component(TabsPane.name, TabsPane);
 Vue.component(Popover.name, Popover);
+Vue.component(Collapse.name, Collapse);
+Vue.component(CollapseItem.name, CollapseItem);
 Vue.use(Toast);
 
 new Vue({
@@ -46,7 +50,8 @@ new Vue({
     str: 'left',
     select: 'middle',
     position: 'left',
-    show: true
+    show: true,
+    selectItems: ['1', '2']
   },
   watch: {
     select(n){
