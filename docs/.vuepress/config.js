@@ -30,6 +30,24 @@ module.exports = {
             title: '通用',
             collapsable: false,
             children: [
+              '/component/Color',
+              '/component/Icon',
+              '/component/Button'
+            ]
+          },
+          {
+            title: '布局',
+            collapsable: false,
+            children: [
+              '/component/Icon',
+              '/component/Button'
+            ]
+          },
+          {
+            title: '数据录入',
+            collapsable: false,
+            children: [
+              '/component/Icon',
               '/component/Button'
             ]
           },
@@ -37,4 +55,4 @@ module.exports = {
       },
     ]
   }
-}
+};

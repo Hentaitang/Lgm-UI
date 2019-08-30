@@ -18,10 +18,10 @@
     </div>
     <div class="content">
       <lgm-button icon="i-setting" circle></lgm-button>
-      <lgm-button type="primary" icon="i-check" circle></lgm-button>
+      <lgm-button type="primary" icon="i-home" circle></lgm-button>
       <lgm-button type="success" icon="i-check" circle></lgm-button>
-      <lgm-button type="info" icon="i-check" circle></lgm-button>
-      <lgm-button type="warning" icon="i-check" circle></lgm-button>
+      <lgm-button type="info" icon="i-search" circle></lgm-button>
+      <lgm-button type="warning" icon="i-skinning" circle></lgm-button>
       <lgm-button type="danger" icon="i-delete" circle></lgm-button>
     </div>
   </div>
@@ -30,12 +30,10 @@
 
 <script>
   import Button from '../../../../src/button/button';
-  import ButtonGroup from '../../../../src/button/button-group'
 
   export default {
     components: {
-      [Button.name]: Button,
-      [ButtonGroup.name]: ButtonGroup
+      [Button.name]: Button
     }
   }
 </script>
@@ -43,14 +41,10 @@
 <style scoped lang="scss">
   .wrapper {
     margin-top: 1em;
-    border: 1px solid #eaeefb
-  }
-
-  .content, .wrapper {
-    padding: 10px;
-
+    border: 1px solid #eaeefb;
+    padding: 10px 20px;
     .lgm-button {
-      margin-right: 10px;
+      margin: 10px 10px 10px 0;
     }
   }
 </style>
