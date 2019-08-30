@@ -18,7 +18,7 @@
   export default {
     name: 'lgm-button',
     components: {
-      'lgm-icon': Icon
+      [Icon.name]: Icon
     },
     props: {
       icon: {},

@@ -9,13 +9,13 @@ title: 快速上手
 我们先介绍如何引入完整的 LGM-UI。
 ### 完整引入
 在main.js文件下添加如下配置:
-```$xslt
+```js
 import Vue from 'vue';
 import LgmUI from 'lgm-ui'
 import 'lgm-ui/dist/index.css'
 import App from './App.vue';
 
-Vue.use(LgmUI)
+Vue.use(LgmUI);
 
 new Vue({
   render: h => h(App)
@@ -24,17 +24,14 @@ new Vue({
 以上代码便完成了 LGM-UI 的引入。需要注意的是，样式文件需要单独引入。
 ### 按需引入
 如果你只希望引入部分组件，比如 Button 和 Select，那么需要在 main.js 中写入以下内容：
-```$xslt
+```js
 import Vue from 'vue';
 import { Button, Input } from 'lgm-ui';
 import App from './App.vue';
 
 Vue.component(Button.name, Button);
 Vue.component(Input.name, Input);
-/* 或写为
- * Vue.use(Button)
- * Vue.use(Input)
- */
+button
 
 new Vue({
   el: '#app',
@@ -42,10 +39,10 @@ new Vue({
 });
 ```
 完整组件列表和引入方式
-```$xslt
+```js{4}
 import Vue from 'vue';
 import {
-Button,
+  Button,
   Icon,
   ButtonGroup,
   Input,
@@ -89,9 +86,9 @@ Vue.use(CollapseItem);
 Vue.use(Toast);
 ```
 ## 开始使用
-```$xslt
-<lgm-button>默认<lgm-button>
-<lgm-button type="success">成功<lgm-button>
-<lgm-button type="danger" icon="i-loading" circle><lgm-button>
+```vue
+<lgm-button>默认</lgm-button>
+<lgm-button type="success">成功</lgm-button>
+<lgm-button type="danger" icon="i-loading" circle></lgm-button>
 ```
 通过以上方式我们可以很容易地使用 LGM-UI 写出一个 Hello world 页面。 [在线演示](https://codesandbox.io/s/fptfq)

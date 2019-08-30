@@ -11,7 +11,7 @@ describe('Button', () => {
   it('存在.', () => {
     expect(Button).to.be.ok
   });
-  describe('Button 样式', () => {
+  describe('button 样式', () => {
     let Constructor = Vue.extend(Button);
     let vm;
     afterEach(() => {
@@ -100,7 +100,7 @@ describe('Button', () => {
       expect(vm.$el.getAttribute('class')).to.include('lgm-button-danger')
     })
   });
-  describe('Button 事件', () => {
+  describe('button 事件', () => {
     it('点击button触发click事件', () => {
       const Constructor = Vue.extend(Button);
       const vm = new Constructor({

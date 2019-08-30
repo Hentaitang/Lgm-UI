@@ -1,6 +1,6 @@
 <template>
   <svg class="lgm-icon" :class="{loadingIcon: icon === 'i-loading'}" @click="$emit('click', $event)">
-    <use :xlink:href=`#${icon}`></use>
+    <use :xlink:href="`#${icon}`"></use>
   </svg>
 </template>
 <script>
