@@ -26,7 +26,7 @@
     },
     props: {
       span: spanOrOrderProps,
-      offset: [Number, String],
+      offset: Number,
       order: spanOrOrderProps,
       phone: {
         type: Object,

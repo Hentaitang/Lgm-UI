@@ -7,7 +7,7 @@
   export default {
     name: 'lgm-row',
     props: {
-      gutter: [String, Number],
+      gutter: Number,
       justify: {
         type: String,
         validator: function (value) {
@@ -32,8 +32,8 @@
       rowStyle() {
         const {gutter} = this;
         return {
-          marginLeft: -gutter / 2 + 'px',
-          marginRight: -gutter / 2 + 'px'
+          marginLeft: - parseInt(gutter) / 2 + 'px',
+          marginRight: - parseInt(gutter) / 2 + 'px'
         }
       }
     },

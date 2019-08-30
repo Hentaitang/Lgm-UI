@@ -18,7 +18,7 @@
       margin-top: 10px;
     }
 
-    .colbox {
+    .colBox {
       background: grey;
       border: 1px solid red;
       height: 100px;
@@ -165,35 +165,35 @@
 
     <lgm-button type="primary" @click="showToast" loading>按钮</lgm-button>
     <lgm-button type="primary" @click="showToast2">321</lgm-button>
-  <!--    <lgm-layout>-->
-  <!--    <lgm-header>Header</lgm-header>-->
-  <!--    <lgm-layout>-->
+      <lgm-layout>
+      <lgm-header>Header</lgm-header>
+      <lgm-layout>
 
-  <!--      <lgm-content>Content</lgm-content>-->
-  <!--      <lgm-sider>Sider</lgm-sider>-->
-  <!--    </lgm-layout>-->
-  <!--    <lgm-footer>Footer</lgm-footer>-->
-  <!--  </lgm-layout>-->
-  <!--  <lgm-row>-->
-  <!--    <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
-  <!--      <div class="colbox">col-4 order2</div>-->
-  <!--    </lgm-col>-->
-  <!--    <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
-  <!--      <div class="colbox">col-4 order4</div>-->
-  <!--    </lgm-col>-->
-  <!--    <lgm-col :phone="{'span': 24}"  :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
-  <!--      <div class="colbox">col-4 order1</div>-->
-  <!--    </lgm-col>-->
-  <!--    <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
-  <!--      <div class="colbox">col-4 order3</div>-->
-  <!--    </lgm-col>-->
-  <!--    <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
-  <!--      <div class="colbox">col-4 order3</div>-->
-  <!--    </lgm-col>-->
-  <!--    <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
-  <!--      <div class="colbox">col-4 order3</div>-->
-  <!--    </lgm-col>-->
-  <!--  </lgm-row>-->
+        <lgm-content>Content</lgm-content>
+        <lgm-sider>Sider</lgm-sider>
+      </lgm-layout>
+      <lgm-footer>Footer</lgm-footer>
+    </lgm-layout>
+<!--    <lgm-row gutter="20">-->
+<!--      <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
+<!--        <div class="colbox">col-4 order2</div>-->
+<!--      </lgm-col>-->
+<!--      <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
+<!--        <div class="colbox">col-4 order4</div>-->
+<!--      </lgm-col>-->
+<!--      <lgm-col :phone="{'span': 24}"  :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
+<!--        <div class="colbox">col-4 order1</div>-->
+<!--      </lgm-col>-->
+<!--      <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
+<!--        <div class="colbox">col-4 order3</div>-->
+<!--      </lgm-col>-->
+<!--      <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
+<!--        <div class="colbox">col-4 order3</div>-->
+<!--      </lgm-col>-->
+<!--      <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
+<!--        <div class="colbox">col-4 order3</div>-->
+<!--      </lgm-col>-->
+<!--    </lgm-row>-->
   <!--    <div class="box">-->
   <!--      <lgm-input placeholder="123" value="xxxxxxxxx"></lgm-input>-->
   <!--      <lgm-input placeholder="请输入内容" v-model="str" clearable></lgm-input>-->
@@ -206,26 +206,26 @@
   <!--      <lgm-button icon="i-setting" icon-position="left" :loading="loading3" @click="changeLoading3" disabled>按钮-->
   <!--      </lgm-button>-->
   <!--    </div>-->
-      <div class="box">
-        <lgm-button disabled>默认按钮</lgm-button>
-        <lgm-button type="primary" round>主要按钮</lgm-button>
-        <lgm-button type="success" icon="i-setting" disabled>成功按钮</lgm-button>
-        <lgm-button type="info" disabled>信息按钮</lgm-button>
-        <lgm-button type="warning" disabled>警告按钮</lgm-button>
-        <lgm-button type="danger" disabled @click="ddd" round>危险按钮</lgm-button>
-        <lgm-button icon="i-setting" type="primary" circle></lgm-button>
-      </div>
-      <div class="box">
-        <lgm-icon icon="i-user"></lgm-icon>
-        <lgm-icon icon="i-loading"></lgm-icon>
-      </div>
-      <div class="box">
-        <lgm-button-group>
-          <lgm-button type="primary" icon="i-left">上一页</lgm-button>
-          <lgm-button type="primary">更多</lgm-button>
-          <lgm-button type="primary" icon="i-right" icon-position="right">下一页</lgm-button>
-        </lgm-button-group>
-      </div>
+<!--      <div class="box">-->
+<!--        <lgm-button disabled>默认按钮</lgm-button>-->
+<!--        <lgm-button type="primary" round>主要按钮</lgm-button>-->
+<!--        <lgm-button type="success" icon="i-setting" disabled>成功按钮</lgm-button>-->
+<!--        <lgm-button type="info" disabled>信息按钮</lgm-button>-->
+<!--        <lgm-button type="warning" disabled>警告按钮</lgm-button>-->
+<!--        <lgm-button type="danger" disabled @click="ddd" round>危险按钮</lgm-button>-->
+<!--        <lgm-button icon="i-setting" type="primary" circle></lgm-button>-->
+<!--      </div>-->
+<!--      <div class="box">-->
+<!--        <lgm-icon icon="i-user"></lgm-icon>-->
+<!--        <lgm-icon icon="i-loading"></lgm-icon>-->
+<!--      </div>-->
+<!--      <div class="box">-->
+<!--        <lgm-button-group>-->
+<!--          <lgm-button type="primary" icon="i-left">上一页</lgm-button>-->
+<!--          <lgm-button type="primary">更多</lgm-button>-->
+<!--          <lgm-button type="primary" icon="i-right" icon-position="right">下一页</lgm-button>-->
+<!--        </lgm-button-group>-->
+<!--      </div>-->
 </div>
 <script src="./src/app.js"></script>
 </body>

@@ -39,8 +39,8 @@ module.exports = {
             title: '布局',
             collapsable: false,
             children: [
-              '/component/Icon',
-              '/component/Button'
+              '/component/Grid',
+              '/component/Layout'
             ]
           },
           {

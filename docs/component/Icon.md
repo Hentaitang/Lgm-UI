@@ -13,7 +13,6 @@
 ```
 
 ## 图标集合
-按钮不可用状态。
 <ClientOnly>
  <icon-demo-2></icon-demo-2>
 </ClientOnly>

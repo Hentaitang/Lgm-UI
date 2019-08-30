@@ -31,6 +31,9 @@
 </script>
 
 <style scoped lang="scss">
+  * {
+    box-sizing: border-box;
+  }
   .wrapper {
     margin-top: 1em;
     border: 1px solid #eaeefb;
