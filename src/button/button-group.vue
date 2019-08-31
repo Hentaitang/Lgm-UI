@@ -27,18 +27,36 @@
       border-radius: 0;
       &:not(:first-child){
         margin-left: -1px;
-        border-left: 1px solid #fff;
-        border-right: 1px solid #fff;
+        &.lgm-button-primary,
+        &.lgm-button-success,
+        &.lgm-button-danger,
+        &.lgm-button-info,
+        &.lgm-button-warning{
+          border-left: 1px solid #fff;
+          border-right: 1px solid #fff;
+        }
       }
       &:first-child{
         border-top-left-radius: $border-radius;
         border-bottom-left-radius: $border-radius;
-        border-right: 1px solid #fff;
+        &.lgm-button-primary,
+        &.lgm-button-success,
+        &.lgm-button-danger,
+        &.lgm-button-info,
+        &.lgm-button-warning{
+          border-right: 1px solid #fff;
+        }
       }
       &:last-child{
         border-top-right-radius: $border-radius;
         border-bottom-right-radius: $border-radius;
-        border-right: none;
+        &.lgm-button-primary,
+        &.lgm-button-success,
+        &.lgm-button-danger,
+        &.lgm-button-info,
+        &.lgm-button-warning{
+          border-right: none;
+        }
       }
       &:hover{
         position: relative;

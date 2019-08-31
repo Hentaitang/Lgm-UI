@@ -6,9 +6,9 @@
         <lgm-button type="primary" icon="i-right" icon-position="right">下一页</lgm-button>
       </lgm-button-group>
       <lgm-button-group>
-        <lgm-button type="primary" icon="i-search">搜索</lgm-button>
-        <lgm-button type="primary">更多</lgm-button>
-        <lgm-button type="primary" icon="i-delete">删除</lgm-button>
+        <lgm-button type="success" icon="i-search">搜索</lgm-button>
+        <lgm-button type="success">更多</lgm-button>
+        <lgm-button type="success" icon="i-delete">删除</lgm-button>
       </lgm-button-group>
     </div>
   </div>

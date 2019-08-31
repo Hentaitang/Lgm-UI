@@ -15,6 +15,7 @@
       },
       position: {
         type: String,
+        default: 'top',
         validator(value) {
           return ['top', 'left', 'bottom', 'right'].indexOf(value) >= 0
         }

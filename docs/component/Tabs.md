@@ -1,105 +1,100 @@
 # Tabs  标签页
-通过鼠标或键盘输入字符
+分隔内容上有关联但属于不同类别的数据集合。
 ## 基础用法
-输入框基础用法。
+默认选中第一项。
 <ClientOnly>
- <input-demo-1></input-demo-1>
+ <tabs-demo-1></tabs-demo-1>
 </ClientOnly>
 
 ```vue
-<lgm-input placeholder="请输入内容" v-model="input"></lgm-input>
-<script>
-  export default {
-    data() {
-      return {
-        input: ''
-      }
-    }
-  }
-</script>
+<lgm-tabs selected="Tab1">
+  <lgm-tabs-head>
+    <lgm-tabs-item label="Tab1">Tab1</lgm-tabs-item>
+    <lgm-tabs-item label="Tab2">Tab2</lgm-tabs-item>
+    <lgm-tabs-item label="Tab3">Tab3</lgm-tabs-item>
+  </lgm-tabs-head>
+  <lgm-tabs-body>
+    <lgm-tabs-pane name="Tab1">Content of Tab Pane 1</lgm-tabs-pane>
+    <lgm-tabs-pane name="Tab2">Content of Tab Pane 2</lgm-tabs-pane>
+    <lgm-tabs-pane name="Tab3">Content of Tab Pane 3</lgm-tabs-pane>
+  </lgm-tabs-body>
+</lgm-tabs>
 ```
 
 ## 禁用状态
-输入框禁用状态，添加disabled属性。
+禁用某一项，添加 disabled 属性。
 <ClientOnly>
- <input-demo-2></input-demo-2>
+ <tabs-demo-2></tabs-demo-2>
 </ClientOnly>
 
 ```vue
-<lgm-input placeholder="请输入内容" v-model="input" disabled></lgm-input>
-<script>
-  export default {
-    data() {
-      return {
-        input: ''
-      }
-    }
-  }
-</script>
+<lgm-tabs selected="Tab1">
+  <lgm-tabs-head>
+    <lgm-tabs-item label="Tab1">Tab1</lgm-tabs-item>
+    <lgm-tabs-item label="Tab2" disabled>Tab2</lgm-tabs-item>
+    <lgm-tabs-item label="Tab3">Tab3</lgm-tabs-item>
+  </lgm-tabs-head>
+  <lgm-tabs-body>
+    <lgm-tabs-pane name="Tab1">Content of Tab Pane 1</lgm-tabs-pane>
+    <lgm-tabs-pane name="Tab2">Content of Tab Pane 2</lgm-tabs-pane>
+    <lgm-tabs-pane name="Tab3">Content of Tab Pane 3</lgm-tabs-pane>
+  </lgm-tabs-body>
+</lgm-tabs>
 ```
 
-## 可清空
-输入框可清空，添加clearable属性。
+## 图标标签
+有图标的标签，添加 icon 属性。
 <ClientOnly>
- <input-demo-3></input-demo-3>
+ <tabs-demo-3></tabs-demo-3>
 </ClientOnly>
 
 ```vue
-<lgm-input placeholder="请输入内容" v-model="input" clearable></lgm-input>
-<script>
-  export default {
-    data() {
-      return {
-        input: ''
-      }
-    }
-  }
-</script>
+<lgm-tabs selected="Tab1">
+  <lgm-tabs-head>
+    <lgm-tabs-item label="Tab1" icon="i-setting">Tab1</lgm-tabs-item>
+    <lgm-tabs-item label="Tab2" icon="i-image">Tab2</lgm-tabs-item>
+    <lgm-tabs-item label="Tab3" icon="i-phone">Tab3</lgm-tabs-item>
+  </lgm-tabs-head>
+  <lgm-tabs-body>
+    <lgm-tabs-pane name="Tab1">Content of Tab Pane 1</lgm-tabs-pane>
+    <lgm-tabs-pane name="Tab2">Content of Tab Pane 2</lgm-tabs-pane>
+    <lgm-tabs-pane name="Tab3">Content of Tab Pane 3</lgm-tabs-pane>
+  </lgm-tabs-body>
+</lgm-tabs>
 ```
 
-## 带 icon 的输入框
-带有图标标记输入类型，添加prefix-icon/suffix-icon属性。
+## 标签位置
+可以通过 position 设置标签的位置
 <ClientOnly>
- <input-demo-4></input-demo-4>
+ <tabs-demo-4></tabs-demo-4>
 </ClientOnly>
 
 ```vue
-<lgm-input 
-  placeholder="请输入内容" 
-  v-model="input1" 
-  prefix-icon="i-search"></lgm-input>
-<lgm-input 
-  placeholder="请输入内容" 
-  v-model="input2" 
-  suffix-icon="i-loading"></lgm-input>
-<script>
-  export default {
-    data() {
-      return {
-        input1: '',
-        input2: ''
-      }
-    }
-  }
-</script>
-```
+<lgm-button-group>
+  <lgm-button @click="position = 'top'">Top</lgm-button>
+  <lgm-button @click="position = 'left'">Left</lgm-button>
+  <lgm-button @click="position = 'bottom'">Bottom</lgm-button>
+  <lgm-button @click="position = 'right'">Right</lgm-button>
+</lgm-button-group>
 
-## 文本域
-用于输入多行文本信息，通过将 type 属性的值指定为 textarea。
-<ClientOnly>
- <input-demo-5></input-demo-5>
-</ClientOnly>
-```vue
-<lgm-input 
-  placeholder="请输入内容" 
-  v-model="textarea" 
-  type="textarea" 
-  :rows="2"></lgm-input>
+<lgm-tabs :selected.sync="selectItem" :position="position">
+  <lgm-tabs-head>
+    <lgm-tabs-item label="Tab1">Tab1</lgm-tabs-item>
+    <lgm-tabs-item label="Tab2">Tab2</lgm-tabs-item>
+    <lgm-tabs-item label="Tab3">Tab3</lgm-tabs-item>
+  </lgm-tabs-head>
+  <lgm-tabs-body>
+    <lgm-tabs-pane name="Tab1">Content of Tab Pane 1</lgm-tabs-pane>
+    <lgm-tabs-pane name="Tab2">Content of Tab Pane 2</lgm-tabs-pane>
+    <lgm-tabs-pane name="Tab3">Content of Tab Pane 3</lgm-tabs-pane>
+  </lgm-tabs-body>
+</lgm-tabs>
 <script>
-  export default {
-    data() {
+  export default{
+    data(){
       return {
-        textarea: ''
+        position: 'top',
+        selectItem: 'Tab1'
       }
     }
   }
@@ -107,25 +102,23 @@
 ```
 
 ## 属性
-  - 输入框的属性说明如下：
+  - tabs的属性说明如下：
 
   | 参数 | 说明 | 类型 | 可选值 | 默认值 |
   | ---- |:----:|:----:|:----:|:----:|
-  | type | 类型 | string | text，textarea 和其他 [原生 input 的 type 值](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Form_%3Cinput%3E_types)  | text |
-  | value / v-model | 绑定值 | string / number | — |  —  |
-  | placeholder | 输入框占位文本 | string | — |  —  |
+  | selected | 表示初始选中的tab label值(requried 必需项) | string |  —  |  — |
+  | position | tabs的方向 | string |top/right/bottom/left|top|
+  
+  - tabs-item的属性说明如下：
+
+  | 参数 | 说明 | 类型 | 可选值 | 默认值 |
+  | ---- |:----:|:----:|:----:|:----:|
+  | label | 每个tab的唯一标记，与pane面板的name属性相对应(requried 必需项) | string |   —   |    —    |
+  | icon | 是否需要icon | string | — |  —  |
   | disabled | 是否禁用状态 | boolean | — | false |
-  | clearable | 是否可清空 | boolean |  —   |false|
-  | prefix-icon | 输入框头部图标 | string |   —    |   —    |
-  | suffix-icon | 输入框尾部图标 | string |  —   |   —    |
-  | rows | 输入框行数，只对 type="textarea" 有效 | number |  —   | 4 |
-  | maxlength | 原生属性，最大输入长度 | number |  —   |   —    |
-  | minlength | 原生属性，最小输入长度 | number |  —   |   —    |
-  | autocomplete | 原生属性，自动补全 | string |on, off|   off    |
-  | name | 原生属性 | string |  —   |   —    |
-  | readonly | 原生属性，是否只读 | boolean |  —   |false|
-  | max | 原生属性，设置最大值 |    —     |  —   |   —    |
-  | min | 原生属性，设置最小值 |    —     |  —   |   —    |
-  | step | 原生属性，设置输入字段的合法数字间隔 |    —     |  —   |   —    |
-  | autofocus | 原生属性，自动获取焦点 | boolean |true, false|false|
-  | form | 原生属性 | string |  —   |   —    |
+  
+  - tabs-pane的属性说明如下：
+
+  | 参数 | 说明 | 类型 | 可选值 | 默认值 |
+  | ---- |:----:|:----:|:----:|:----:|
+  | name | 每个pane的唯一标记，与tab标签的label属性相对应(requried 必需项) | string |   —    |   —    |

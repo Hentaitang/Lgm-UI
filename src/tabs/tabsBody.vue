@@ -22,6 +22,7 @@
 <style lang="scss" scoped>
   .lgm-tabs-body{
     order: 2;
+    flex: 1;
     &.top{
       order: 2;
     }
