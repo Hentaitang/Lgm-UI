@@ -33,7 +33,7 @@ title: 介绍
 ## 注意
 添加 CSS 样式:
 
-本UI库所有组件的盒模型均使用```border-box```，使用本UI库是务必在 css 中开启```border-box```. 
+本UI库所有组件的盒模型均使用```border-box```，使用本UI库请务必在 css 中开启```border-box```. 
 ```css
 *, *::after, *::before{
     box-sizing: border-box;

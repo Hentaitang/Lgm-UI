@@ -24,6 +24,7 @@
   import Button from '../../../../src/button/button';
 
   export default {
+    name: 'button-demo-2',
     components: {
       [Button.name]: Button
     }

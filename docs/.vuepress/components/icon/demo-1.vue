@@ -8,6 +8,7 @@
 <script>
   import Icon from '../../../../src/icon/icon';
   export default {
+    name: 'icon-demo-1',
     components: {
       [Icon.name]: Icon
     }

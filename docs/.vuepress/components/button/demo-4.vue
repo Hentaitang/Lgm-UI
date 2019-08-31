@@ -20,6 +20,7 @@
   import ButtonGroup from '../../../../src/button/button-group'
 
   export default {
+    name: 'button-demo-4',
     components: {
       [Button.name]: Button,
       [ButtonGroup.name]: ButtonGroup

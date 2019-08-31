@@ -21,6 +21,7 @@
 <script>
   import Toast from '../../../../src/toast/toast';
   export default {
+    name: 'color-demo-1',
     data() {
       return {
         copyValue: '',

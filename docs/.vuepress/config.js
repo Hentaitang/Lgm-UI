@@ -8,6 +8,7 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
+      { text: 'Guide', link: '/guide/start' },
       { text: 'Blog', link: 'https://www.jianshu.com/u/740765d45aca' },
       { text: 'GitHub', link: 'https://github.com/Hentaitang/Lgm-UI' }
     ],
@@ -18,8 +19,7 @@ module.exports = {
         collapsable: false,
         children: [
           '/',
-          '/guide/install.md',
-          '/guide/start.md'
+          '/guide/start'
         ]
       },
       {

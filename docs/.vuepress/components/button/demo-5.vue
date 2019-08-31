@@ -11,6 +11,7 @@
   import Button from '../../../../src/button/button';
 
   export default {
+    name: 'button-demo-5',
     data() {
       return {
         loading: false

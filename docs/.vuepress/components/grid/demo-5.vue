@@ -28,6 +28,7 @@
   import Col from '../../../../src/grid/col';
 
   export default {
+    name: 'grid-demo-5',
     components: {
       [Row.name]: Row,
       [Col.name]: Col

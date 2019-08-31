@@ -18,6 +18,7 @@
   import Footer from '../../../../src/layout/footer';
   import Sider from '../../../../src/layout/sider';
   export default {
+    name: 'layout-demo-3',
     components: {
       [Layout.name]: Layout,
       [Header.name]: Header,

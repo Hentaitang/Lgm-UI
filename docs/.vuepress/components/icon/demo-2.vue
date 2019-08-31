@@ -10,6 +10,7 @@
   import Icon from '../../../../src/icon/icon';
   import Toast from '../../../../src/toast/toast';
   export default {
+    name: 'icon-demo-2',
     data() {
       return {
         icons: [

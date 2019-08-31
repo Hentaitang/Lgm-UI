@@ -30,6 +30,7 @@
   import Col from '../../../../src/grid/col';
 
   export default {
+    name: 'grid-demo-4',
     components: {
       [Row.name]: Row,
       [Col.name]: Col

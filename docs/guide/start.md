@@ -4,6 +4,18 @@ title: 快速上手
 # 快速上手
 本节将介绍如何在项目中使用 LGM-UI。
 
+## 安装
+推荐使用 yarn 的方式安装，它的速度更快(注意在项目中不要npm与yarn混用)。
+
+
+```$xslt
+$ yarn add lgm-ui
+
+// or
+
+$ npm install lgm-ui --save
+```
+
 ## 引入LGM-UI
 你可以引入整个 LGM-UI，或是根据需要仅引入部分组件。
 我们先介绍如何引入完整的 LGM-UI。

@@ -22,6 +22,7 @@
   import Row from '../../../../src/grid/row';
   import Col from '../../../../src/grid/col';
   export default {
+    name: 'grid-demo-1',
     components: {
       [Row.name]: Row,
       [Col.name]: Col

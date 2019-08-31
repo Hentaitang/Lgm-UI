@@ -14,6 +14,7 @@
   import Content from '../../../../src/layout/content';
   import Footer from '../../../../src/layout/footer';
   export default {
+    name: 'layout-demo-1',
     components: {
       [Layout.name]: Layout,
       [Header.name]: Header,
