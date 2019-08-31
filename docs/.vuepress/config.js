@@ -7,9 +7,9 @@ module.exports = {
   base: '/Lgm-UI/',
   themeConfig: {
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Guide', link: '/guide/start' },
-      { text: 'Blog', link: 'https://www.jianshu.com/u/740765d45aca' },
+      { text: '首页', link: '/' },
+      { text: '指南', link: '/guide/start' },
+      { text: '博客', link: 'https://www.jianshu.com/u/740765d45aca' },
       { text: 'GitHub', link: 'https://github.com/Hentaitang/Lgm-UI' }
     ],
     // displayAllHeaders: true,
@@ -47,8 +47,7 @@ module.exports = {
             title: '数据录入',
             collapsable: false,
             children: [
-              '/component/Icon',
-              '/component/Button'
+              '/component/Input'
             ]
           },
         ]

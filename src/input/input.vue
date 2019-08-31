@@ -6,7 +6,16 @@
              :placeholder="placeholder"
              :disabled="disabled"
              :readonly="readonly"
+             :name="name"
+             :max="max"
+             :min="min"
+             :step="step"
+             :form="form"
+             :autofocus="autofocus"
              :value="value"
+             :autocomplete="autocomplete"
+             :maxlength="maxlength"
+             :minlength="minlength"
              @change="$emit('change', $event.target.value)"
              @input="$emit('input', $event.target.value)"
              @focus="inputFocus"
@@ -33,6 +42,15 @@
               @blur="$emit('blur', $event)"
               :disabled="disabled"
               :readonly="readonly"
+              :name="name"
+              :max="max"
+              :min="min"
+              :step="step"
+              :form="form"
+              :autofocus="autofocus"
+              :autocomplete="autocomplete"
+              :maxlength="maxlength"
+              :minlength="minlength"
               :placeholder="placeholder"></textarea>
   </div>
 </template>
@@ -48,10 +66,7 @@
     props: {
       type: {
         type: String,
-        default: 'text',
-        validator: function(value){
-          return value === 'text' || value === 'textarea'
-        }
+        default: 'text'
       },
       rows: {
         type: Number,
@@ -77,6 +92,21 @@
       },
       suffixIcon: {
         type: String
+      },
+      autofocus: Boolean,
+      maxlength: Number,
+      minlength: Number,
+      name: String,
+      max: {},
+      min: {},
+      step: {},
+      form: String,
+      autocomplete: {
+        type: String,
+        default: 'off',
+        validator(value){
+          return ['on', 'off'].indexOf(value) >= 0
+        }
       }
     },
     components: {
@@ -96,7 +126,8 @@
 </script>
 <style lang="scss" scoped>
   .lgm-input-wrapper {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     vertical-align: middle;
     font-size: 14px;
     position: relative;
@@ -158,8 +189,6 @@
     > .suffix-icon,
     > .prefix-icon{
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
       fill: #c0c4cc;
     }
     > .suffix-icon{

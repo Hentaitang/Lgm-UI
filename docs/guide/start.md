@@ -103,4 +103,4 @@ Vue.use(Toast);
 <lgm-button type="success">成功</lgm-button>
 <lgm-button type="danger" icon="i-loading" circle></lgm-button>
 ```
-通过以上方式我们可以很容易地使用 LGM-UI 写出一个 Hello world 页面。 [在线演示](https://codesandbox.io/s/fptfq)
+i

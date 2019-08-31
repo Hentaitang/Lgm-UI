@@ -98,7 +98,11 @@
 ```vue
 <template>
   <!-- `loading` 为 true 或 false -->
-  <lgm-button type="primary" :loading="loading" @click="loading = !loading" icon="i-setting">加载中</lgm-button>
+  <lgm-button 
+    type="primary" 
+    :loading="loading" 
+    @click="loading = !loading" 
+    icon="i-setting">加载中</lgm-button>
 </template>
 <script>
   export default {
