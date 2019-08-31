@@ -137,6 +137,7 @@
     border-radius: 5px;
     word-break: break-all;
     max-width: 20em;
+    font-size: 14px;
 
     &::before,
     &::after {

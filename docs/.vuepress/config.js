@@ -50,6 +50,22 @@ module.exports = {
               '/component/Input'
             ]
           },
+          {
+            title: '数据展示',
+            collapsable: false,
+            children: [
+              '/component/Collapse',
+              '/component/Popover',
+              '/component/Tabs'
+            ]
+          },
+          {
+            title: '反馈',
+            collapsable: false,
+            children: [
+              '/component/Toast'
+            ]
+          }
         ]
       },
     ]
