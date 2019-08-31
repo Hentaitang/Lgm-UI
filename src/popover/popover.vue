@@ -138,6 +138,7 @@
     word-break: break-all;
     max-width: 20em;
     font-size: 14px;
+    z-index: 2019;
 
     &::before,
     &::after {
@@ -150,7 +151,7 @@
     &.top {
       margin-top: -10px;
       transform: translateY(-100%);
-      filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .5));
+      box-shadow: 0 1px 1px 0 rgba(0,0,0,.5);
 
       &::before {
         top: 100%;
@@ -167,7 +168,7 @@
 
     &.bottom {
       margin-top: 10px;
-      filter: drop-shadow(0 -1px 1px rgba(0, 0, 0, .5));
+      box-shadow: 0 -1px 1px 0 rgba(0,0,0,.5);
 
       &::before {
         bottom: 100%;
@@ -185,7 +186,7 @@
     &.left {
       transform: translate(-100%, -50%);
       margin-left: -10px;
-      filter: drop-shadow(1px 0px 1px rgba(0, 0, 0, .5));
+      box-shadow: 1px 0 1px 0 rgba(0,0,0,.5);
 
       &::before {
         top: 50%;
@@ -207,7 +208,7 @@
     &.right {
       margin-left: 10px;
       transform: translateY(-50%);
-      filter: drop-shadow(-1px 0px 1px rgba(0, 0, 0, .5));
+      box-shadow: -1px 0 1px 0 rgba(0,0,0,.5);
 
       &::before {
         top: 50%;
