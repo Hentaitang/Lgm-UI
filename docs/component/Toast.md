@@ -1,105 +1,143 @@
 # Toast  消息弹出框
-通过鼠标或键盘输入字符
+常用于主动操作后的反馈提示。
 ## 基础用法
-输入框基础用法。
+从顶部出现，3 秒后自动消失。
 <ClientOnly>
- <input-demo-1></input-demo-1>
+ <toast-demo-1></toast-demo-1>
 </ClientOnly>
 
 ```vue
-<lgm-input placeholder="请输入内容" v-model="input"></lgm-input>
+<lgm-button @click="infoShow">打开消息提示</lgm-button>
+<lgm-button @click="HTMLShow">使用 HTML 片段</lgm-button>
 <script>
   export default {
-    data() {
-      return {
-        input: ''
+    methods: {
+      infoShow() {
+        this.$toast({message: '这是一条消息提示'})
+      },
+      HTMLShow() {
+        this.$toast({
+          message: `
+            <strong>内容可以是 
+              <span style="color: #eb7070;">HTML</span>
+            </strong>`,
+          dangerouslyUseHTMLString: true
+        })
       }
     }
   }
 </script>
 ```
 
-## 禁用状态
-输入框禁用状态，添加disabled属性。
+## 不同状态
+用来显示「消息、成功、错误、警告」类的操作反馈。
 <ClientOnly>
- <input-demo-2></input-demo-2>
+ <toast-demo-2></toast-demo-2>
 </ClientOnly>
 
 ```vue
-<lgm-input placeholder="请输入内容" v-model="input" disabled></lgm-input>
+<lgm-button @click="infoShow">消息</lgm-button>
+<lgm-button @click="successShow">成功</lgm-button>
+<lgm-button @click="errorShow">错误</lgm-button>
+<lgm-button @click="warningShow">警告</lgm-button>
 <script>
   export default {
-    data() {
-      return {
-        input: ''
+    methods: {
+      infoShow() {
+        this.$toast({message: '这是一条消息提示'})
+      },
+      successShow() {
+        this.$toast({message: '恭喜你，这是一条成功消息', type: 'success'})
+      },
+      errorShow() {
+        this.$toast({message: '错了哦，这是一条错误消息', type: 'error'})
+      },
+      warningShow() {
+        this.$toast({message: '警告哦，这是一条警告消息', type: 'warning'})
       }
     }
   }
 </script>
 ```
 
-## 可清空
-输入框可清空，添加clearable属性。
+## 可关闭
+可以添加关闭按钮。
 <ClientOnly>
- <input-demo-3></input-demo-3>
+ <toast-demo-3></toast-demo-3>
 </ClientOnly>
 
 ```vue
-<lgm-input placeholder="请输入内容" v-model="input" clearable></lgm-input>
+<lgm-button @click="infoShow">消息</lgm-button>
+<lgm-button @click="successShow">成功</lgm-button>
+<lgm-button @click="errorShow">错误</lgm-button>
+<lgm-button @click="warningShow">警告</lgm-button>
 <script>
   export default {
-    data() {
-      return {
-        input: ''
+    methods: {
+      infoShow() {
+        this.$toast({
+          message: '这是一条消息提示', 
+          showClose: true
+        })
+      },
+      successShow() {
+        this.$toast({
+          message: '恭喜你，这是一条成功消息', 
+          type: 'success', 
+          showClose: true
+        })
+      },
+      errorShow() {
+        this.$toast({
+          message: '错了哦，这是一条错误消息', 
+          type: 'error', 
+          showClose: true
+        })
+      },
+      warningShow() {
+        this.$toast({
+          message: '警告哦，这是一条警告消息', 
+          type: 'warning', 
+          showClose: true
+        })
       }
     }
   }
 </script>
 ```
 
-## 带 icon 的输入框
-带有图标标记输入类型，添加prefix-icon/suffix-icon属性。
+## 位置
+可以通过 position 设置toast的位置
 <ClientOnly>
- <input-demo-4></input-demo-4>
+ <toast-demo-4></toast-demo-4>
 </ClientOnly>
 
 ```vue
-<lgm-input 
-  placeholder="请输入内容" 
-  v-model="input1" 
-  prefix-icon="i-search"></lgm-input>
-<lgm-input 
-  placeholder="请输入内容" 
-  v-model="input2" 
-  suffix-icon="i-loading"></lgm-input>
+<lgm-button @click="leftShow">左侧</lgm-button>
+<lgm-button @click="middleShow">居中</lgm-button>
+<lgm-button @click="rightShow">右侧</lgm-button>
 <script>
   export default {
-    data() {
-      return {
-        input1: '',
-        input2: ''
-      }
-    }
-  }
-</script>
-```
-
-## 文本域
-用于输入多行文本信息，通过将 type 属性的值指定为 textarea。
-<ClientOnly>
- <input-demo-5></input-demo-5>
-</ClientOnly>
-```vue
-<lgm-input 
-  placeholder="请输入内容" 
-  v-model="textarea" 
-  type="textarea" 
-  :rows="2"></lgm-input>
-<script>
-  export default {
-    data() {
-      return {
-        textarea: ''
+    methods: {
+      leftShow() {
+        this.$toast({
+          message: '这是一条消息提示', 
+          position: 'left'
+        })
+      },
+      middleShow() {
+        this.$toast({
+          message: '恭喜你，这是一条成功消息', 
+          type: 'success', 
+          position: 'middle'
+        })
+      },
+      rightShow() {
+        this.$toast({
+          message: '错了哦，这是一条错误消息', 
+          type: 'error', 
+          position: 'right'
+        })
       }
     }
   }

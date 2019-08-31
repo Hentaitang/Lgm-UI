@@ -239,6 +239,7 @@
     z-index: 1010;
     transition: all .4s;
     background-color: #fff;
+    border-radius: 5px;
 
     .lgm-toast-content {
       padding: 10px 16px;

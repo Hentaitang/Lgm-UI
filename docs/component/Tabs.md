@@ -66,7 +66,7 @@
 ## 标签位置
 可以通过 position 设置标签的位置
 <ClientOnly>
- <tabs-demo-4></tabs-demo-4>
+ <tabs-demo-3></tabs-demo-3>
 </ClientOnly>
 
 ```vue
