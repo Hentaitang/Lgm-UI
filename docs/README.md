@@ -8,6 +8,8 @@ title: 介绍
 [![GitHub](https://img.shields.io/github/license/Hentaitang/Lgm-UI)](https://github.com/Hentaitang/Lgm-UI/blob/master/LICENSE)
 
 基于vue 2.x 开发的的UI组件库
+
+![logo.png](https://i.loli.net/2019/09/01/WTvZeMxpENzQrKU.png)
 ## 简介
 
 这是我为了巩固vue知识做的一个 UI 框架，希望对你有帮助.

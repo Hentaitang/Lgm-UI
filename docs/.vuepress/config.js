@@ -1,9 +1,9 @@
 module.exports = {
-  title: 'LGM-UI ',
+  title: 'LGM-UI',
   description: 'A easy UI library, built with Vue.js 2.0',
-  // head: [
-  //   ['link', { rel: 'icon', href: '/logo.png' }]
-  // ],
+  head: [
+    ['link', { rel: 'icon', href: '/logo.png' }]
+  ],
   base: '/Lgm-UI/',
   themeConfig: {
     nav: [
