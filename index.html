@@ -12,6 +12,8 @@
 
     #app {
       padding: 200px;
+      height: 3000px;
+      padding-top: 1000px;
     }
 
     .box {
@@ -49,6 +51,10 @@
 <body>
 <!--<script src="https://cdn.jsdelivr.net/npm/lgm-ui@0.1.1"></script>-->
 <div id="app">
+      <lgm-button type="danger">失败按钮</lgm-button>
+      <lgm-sticky :offset-top="0" :offset-bottom="120">
+        <lgm-button type="success">成功按钮</lgm-button>
+      </lgm-sticky>
 
 <!--  <lgm-collapse :selected.sync="selectItems" single>-->
 <!--    <lgm-collapse-item  name="1">-->
@@ -144,18 +150,18 @@
   <!--    </template>-->
   <!--    <lgm-button>click 弹出</lgm-button>-->
   <!--  </lgm-popover>-->
-    <lgm-tabs :selected.sync="select" :position="position">
-      <lgm-tabs-head>
-        <lgm-tabs-item label="small" icon="i-setting">小学</lgm-tabs-item>
-        <lgm-tabs-item label="middle" icon="i-close" disabled>初中</lgm-tabs-item>
-        <lgm-tabs-item label="high" icon="i-loading">高中</lgm-tabs-item>
-      </lgm-tabs-head>
-      <lgm-tabs-body>
-        <lgm-tabs-pane name="small">小学生</lgm-tabs-pane>
-        <lgm-tabs-pane name="middle">初中生</lgm-tabs-pane>
-        <lgm-tabs-pane name="high">高中生</lgm-tabs-pane>
-      </lgm-tabs-body>
-    </lgm-tabs>
+<!--    <lgm-tabs :selected.sync="select" :position="position">-->
+<!--      <lgm-tabs-head>-->
+<!--        <lgm-tabs-item label="small" icon="i-setting">小学</lgm-tabs-item>-->
+<!--        <lgm-tabs-item label="middle" icon="i-close" disabled>初中</lgm-tabs-item>-->
+<!--        <lgm-tabs-item label="high" icon="i-loading">高中</lgm-tabs-item>-->
+<!--      </lgm-tabs-head>-->
+<!--      <lgm-tabs-body>-->
+<!--        <lgm-tabs-pane name="small">小学生</lgm-tabs-pane>-->
+<!--        <lgm-tabs-pane name="middle">初中生</lgm-tabs-pane>-->
+<!--        <lgm-tabs-pane name="high">高中生</lgm-tabs-pane>-->
+<!--      </lgm-tabs-body>-->
+<!--    </lgm-tabs>-->
   <!--  <div class="box">-->
   <!--    <lgm-button @click="position='top'">上</lgm-button>-->
   <!--    <lgm-button @click="position='left'">左</lgm-button>-->
@@ -163,17 +169,17 @@
   <!--    <lgm-button @click="position='right'">右</lgm-button>-->
   <!--  </div>-->
 
-    <lgm-button type="primary" @click="showToast" loading>按钮</lgm-button>
-    <lgm-button type="primary" @click="showToast2">321</lgm-button>
-      <lgm-layout>
-      <lgm-header>Header</lgm-header>
-      <lgm-layout>
+<!--    <lgm-button type="primary" @click="showToast" loading>按钮</lgm-button>-->
+<!--    <lgm-button type="primary" @click="showToast2">321</lgm-button>-->
+<!--      <lgm-layout>-->
+<!--      <lgm-header>Header</lgm-header>-->
+<!--      <lgm-layout>-->
 
-        <lgm-content>Content</lgm-content>
-        <lgm-sider>Sider</lgm-sider>
-      </lgm-layout>
-      <lgm-footer>Footer</lgm-footer>
-    </lgm-layout>
+<!--        <lgm-content>Content</lgm-content>-->
+<!--        <lgm-sider>Sider</lgm-sider>-->
+<!--      </lgm-layout>-->
+<!--      <lgm-footer>Footer</lgm-footer>-->
+<!--    </lgm-layout>-->
 <!--    <lgm-row gutter="20">-->
 <!--      <lgm-col :phone="{'span': 24}" :mini-pad="{span: 8}" :pad="{'span': 12}" :pc="{'span': 8}" :wide-pc="{'span': 4}">-->
 <!--        <div class="colbox">col-4 order2</div>-->

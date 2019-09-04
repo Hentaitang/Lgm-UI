@@ -19,6 +19,7 @@ import TabsPane from './tabs/tabsPane';
 import Popover from './popover/popover';
 import Collapse from './collapse/collapse';
 import CollapseItem from './collapse/collapseItem';
+import Sticky from './sticky/sticky';
 
 Vue.component(Button.name, Button);
 Vue.component(Icon.name, Icon);
@@ -39,6 +40,7 @@ Vue.component(TabsPane.name, TabsPane);
 Vue.component(Popover.name, Popover);
 Vue.component(Collapse.name, Collapse);
 Vue.component(CollapseItem.name, CollapseItem);
+Vue.component(Sticky.name, Sticky);
 Vue.use(Toast);
 
 new Vue({

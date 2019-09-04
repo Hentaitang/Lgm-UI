@@ -15,7 +15,7 @@ import TabsHead from './src/tabs/tabsHead';
 import TabsItem from './src/tabs/tabsItem';
 import TabsBody from './src/tabs/tabsBody';
 import TabsPane from './src/tabs/tabsPane';
-import Popover from './src/popover/popover'
+import Popover from './src/popover/popover';
 import Collapse from './src/collapse/collapse';
 import CollapseItem from './src/collapse/collapseItem';
 
