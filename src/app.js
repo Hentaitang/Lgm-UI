@@ -20,6 +20,7 @@ import Popover from './popover/popover';
 import Collapse from './collapse/collapse';
 import CollapseItem from './collapse/collapseItem';
 import Sticky from './sticky/sticky';
+import Dialog from './dialog/dialog';
 
 Vue.component(Button.name, Button);
 Vue.component(Icon.name, Icon);
@@ -41,6 +42,7 @@ Vue.component(Popover.name, Popover);
 Vue.component(Collapse.name, Collapse);
 Vue.component(CollapseItem.name, CollapseItem);
 Vue.component(Sticky.name, Sticky);
+Vue.component(Dialog.name, Dialog);
 Vue.use(Toast);
 
 new Vue({
@@ -53,7 +55,8 @@ new Vue({
     select: 'middle',
     position: 'left',
     show: true,
-    selectItems: ['3', '4']
+    selectItems: ['3', '4'],
+    dialogVisible: false
   },
   watch: {
     select(n){
@@ -75,6 +78,12 @@ new Vue({
     },
     changeLoading3(){
       this.loading3 = !this.loading3;
+    },
+    closeCallback(){
+      console.log(1)
+    },
+    open(){
+      console.log('open')
     },
     ddd(close){
       console.log(1);

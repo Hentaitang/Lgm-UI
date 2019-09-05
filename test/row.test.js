@@ -50,9 +50,9 @@ describe('Row', () => {
       const div = document.createElement('div');
       document.body.appendChild(div);
       div.innerHTML = `
-        <lgm-row gutter="20">
-          <lgm-col span="12"></lgm-col>
-          <lgm-col span="12"></lgm-col>
+        <lgm-row :gutter="20">
+          <lgm-col :span="12"></lgm-col>
+          <lgm-col :span="12"></lgm-col>
          </lgm-row>
       `;
       vm = new Vue({

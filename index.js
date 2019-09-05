@@ -18,6 +18,7 @@ import TabsPane from './src/tabs/tabsPane';
 import Popover from './src/popover/popover';
 import Collapse from './src/collapse/collapse';
 import CollapseItem from './src/collapse/collapseItem';
+import Sticky from './src/sticky/sticky';
 
 const components = [
   Button,
@@ -39,7 +40,8 @@ const components = [
   TabsPane,
   Popover,
   Collapse,
-  CollapseItem
+  CollapseItem,
+  Sticky
 ];
 
 components.forEach(component=>{
@@ -77,5 +79,6 @@ export default {
   Popover,
   Collapse,
   CollapseItem,
+  Sticky,
   install
 }

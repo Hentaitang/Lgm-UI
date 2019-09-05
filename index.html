@@ -51,10 +51,24 @@
 <body>
 <!--<script src="https://cdn.jsdelivr.net/npm/lgm-ui@0.1.1"></script>-->
 <div id="app">
-      <lgm-button type="danger">失败按钮</lgm-button>
-      <lgm-sticky :offset-top="0" :offset-bottom="120">
-        <lgm-button type="success">成功按钮</lgm-button>
-      </lgm-sticky>
+  <lgm-button type="success" @click="dialogVisible = true">点击打开 Dialog</lgm-button>
+  <lgm-dialog :center="true" width="30%" :visible.sync="dialogVisible" :lock-scroll="false"  custom-class="xxx" :close="closeCallback" :open="open">
+    <span slot="title">提示</span>
+    <span>这是一段信息</span>
+    <div slot="footer" class="dialog-footer">
+      <lgm-button @click="dialogVisible = false">取 消</lgm-button>
+      <lgm-button type="primary" @click="dialogVisible = false">确 定</lgm-button>
+    </div>
+  </lgm-dialog>
+<!--  <div class="testWrapper" style="height: 3000px; padding: 500px">-->
+<!--    <lgm-sticky :offset-top="120">-->
+<!--      test-->
+<!--    </lgm-sticky>-->
+<!--  </div>-->
+<!--      <lgm-button type="danger">失败按钮</lgm-button>-->
+<!--      <lgm-sticky :offset-top="0" :offset-bottom="120">-->
+<!--        <lgm-button type="success">成功按钮</lgm-button>-->
+<!--      </lgm-sticky>-->
 
 <!--  <lgm-collapse :selected.sync="selectItems" single>-->
 <!--    <lgm-collapse-item  name="1">-->

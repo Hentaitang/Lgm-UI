@@ -29,7 +29,7 @@ describe('Col', ()=>{
     it('接收offset属性', ()=>{
       vm = new Constructor({
         propsData: {
-          offset: '4'
+          offset: 4
         }
       }).$mount();
       const colClass = vm.$el.classList.contains('offset-4');
@@ -50,7 +50,7 @@ describe('Col', ()=>{
     it('接收phone属性', ()=>{
       vm = new Constructor({
         propsData: {
-          phone: {span: '2', offset: '1'}
+          phone: {span: '2', offset: 1}
         }
       }).$mount();
       const spanClass = vm.$el.classList.contains('col-phone-2');
@@ -61,7 +61,7 @@ describe('Col', ()=>{
     it('接收miniPad属性', ()=>{
       vm = new Constructor({
         propsData: {
-          miniPad: {span: '2', offset: '1'}
+          miniPad: {span: '2', offset: 1}
         }
       }).$mount();
       const spanClass = vm.$el.classList.contains('col-miniPad-2');
@@ -72,7 +72,7 @@ describe('Col', ()=>{
     it('接收pad属性', ()=>{
       vm = new Constructor({
         propsData: {
-          pad: {span: '2', offset: '1'}
+          pad: {span: '2', offset: 1}
         }
       }).$mount();
       const spanClass = vm.$el.classList.contains('col-pad-2');
@@ -83,7 +83,7 @@ describe('Col', ()=>{
     it('接收narrowPc属性', ()=>{
       vm = new Constructor({
         propsData: {
-          narrowPc: {span: '2', offset: '1'}
+          narrowPc: {span: '2', offset: 1}
         }
       }).$mount();
       const spanClass = vm.$el.classList.contains('col-narrowPc-2');
@@ -94,7 +94,7 @@ describe('Col', ()=>{
     it('接收pc属性', ()=>{
       vm = new Constructor({
         propsData: {
-          pc: {span: '2', offset: '1'}
+          pc: {span: '2', offset: 1}
         }
       }).$mount();
       const spanClass = vm.$el.classList.contains('col-pc-2');
@@ -105,7 +105,7 @@ describe('Col', ()=>{
     it('接收widePc属性', ()=>{
       vm = new Constructor({
         propsData: {
-          widePc: {span: '2', offset: '1'}
+          widePc: {span: '2', offset: 1}
         }
       }).$mount();
       const spanClass = vm.$el.classList.contains('col-widePc-2');
