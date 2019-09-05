@@ -56,7 +56,7 @@ new Vue({
     position: 'left',
     show: true,
     selectItems: ['3', '4'],
-    dialogVisible: false
+    dialogVisible: true
   },
   watch: {
     select(n){

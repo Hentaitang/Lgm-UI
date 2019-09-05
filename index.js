@@ -19,6 +19,7 @@ import Popover from './src/popover/popover';
 import Collapse from './src/collapse/collapse';
 import CollapseItem from './src/collapse/collapseItem';
 import Sticky from './src/sticky/sticky';
+import Dialog from './src/dialog/dialog';
 
 const components = [
   Button,
@@ -41,7 +42,8 @@ const components = [
   Popover,
   Collapse,
   CollapseItem,
-  Sticky
+  Sticky,
+  Dialog
 ];
 
 components.forEach(component=>{
@@ -80,5 +82,6 @@ export default {
   Collapse,
   CollapseItem,
   Sticky,
+  Dialog,
   install
 }

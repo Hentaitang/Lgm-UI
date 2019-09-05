@@ -120,6 +120,9 @@
           },250)
         }
       }
+    },
+    mounted() {
+      this.dialogShow = this.visible
     }
   }
 </script>
